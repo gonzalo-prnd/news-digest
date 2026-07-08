@@ -1,0 +1,545 @@
+<title>데일리 브리핑</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #eef0f2;
+    --bg-elevated: #ffffff;
+    --text: #1c2024;
+    --text-muted: #5b6470;
+    --border: #d7dbe0;
+    --accent: #c96a12;
+    --accent-soft: #f6e4cd;
+    --rail-car: #2f6e8f;
+    --rail-community: #6b7280;
+    --rail-heydealer: #c96a12;
+    --shadow: 0 1px 2px rgba(20, 24, 28, 0.06), 0 8px 24px rgba(20, 24, 28, 0.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15181d;
+      --bg-elevated: #1c2027;
+      --text: #eef0f2;
+      --text-muted: #99a1ac;
+      --border: #2a2f37;
+      --accent: #f2a134;
+      --accent-soft: #3a2b14;
+      --rail-car: #6fb6d8;
+      --rail-community: #8b93a0;
+      --rail-heydealer: #f2a134;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15181d;
+    --bg-elevated: #1c2027;
+    --text: #eef0f2;
+    --text-muted: #99a1ac;
+    --border: #2a2f37;
+    --accent: #f2a134;
+    --accent-soft: #3a2b14;
+    --rail-car: #6fb6d8;
+    --rail-community: #8b93a0;
+    --rail-heydealer: #f2a134;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+  }
+  :root[data-theme="light"] {
+    --bg: #eef0f2;
+    --bg-elevated: #ffffff;
+    --text: #1c2024;
+    --text-muted: #5b6470;
+    --border: #d7dbe0;
+    --accent: #c96a12;
+    --accent-soft: #f6e4cd;
+    --rail-car: #2f6e8f;
+    --rail-community: #6b7280;
+    --rail-heydealer: #c96a12;
+    --shadow: 0 1px 2px rgba(20, 24, 28, 0.06), 0 8px 24px rgba(20, 24, 28, 0.05);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 28px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--text);
+  }
+  .masthead-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .masthead h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .masthead .clock {
+    font-family: 'Consolas', 'SFMono-Regular', ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+  .masthead p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+  }
+  .schedule-strip {
+    display: flex;
+    gap: 16px;
+    font-family: 'Consolas', 'SFMono-Regular', ui-monospace, monospace;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+  }
+  .schedule-strip b { color: var(--text); font-weight: 700; }
+
+  .calendar-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    padding: 16px 18px;
+  }
+  .calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .calendar-title {
+    font-weight: 700;
+    font-family: 'Consolas', 'SFMono-Regular', ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.9rem;
+  }
+  .calendar-nav { display: flex; gap: 6px; }
+  .calendar-nav button {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 3px 9px;
+    font-size: 0.85rem;
+    color: var(--text);
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .calendar-nav button:hover { border-color: var(--accent); }
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+  }
+  .calendar-dow {
+    text-align: center;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    padding-bottom: 4px;
+  }
+  .calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    font-size: 0.78rem;
+    font-family: 'Consolas', 'SFMono-Regular', ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    color: var(--text-muted);
+  }
+  .calendar-day.empty { visibility: hidden; }
+  .calendar-day.has-entry {
+    color: var(--text);
+    font-weight: 700;
+    border-color: var(--border);
+    cursor: pointer;
+    background: var(--bg);
+  }
+  .calendar-day.has-entry:hover { border-color: var(--accent); }
+  .calendar-day.selected { background: var(--accent-soft); border-color: var(--accent); }
+  .calendar-dots { font-size: 0.6rem; line-height: 1; }
+  .calendar-filter-bar {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+  .calendar-filter-bar button {
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.82rem;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+  }
+
+  .feed { display: flex; flex-direction: column; gap: 20px; }
+
+  .entry {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .entry-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .entry-edition {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .edition-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+  .entry-edition .label {
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .entry-edition .range {
+    font-family: 'Consolas', 'SFMono-Regular', ui-monospace, monospace;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .entry-date {
+    font-family: 'Consolas', 'SFMono-Regular', ui-monospace, monospace;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .headline {
+    padding: 14px 18px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    background: var(--accent-soft);
+    border-bottom: 1px solid var(--border);
+    text-wrap: balance;
+  }
+
+  .section { padding: 14px 18px; border-bottom: 1px solid var(--border); }
+  .section:last-child { border-bottom: none; }
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+  .rail {
+    width: 3px;
+    height: 14px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .rail.car { background: var(--rail-car); }
+  .rail.community { background: var(--rail-community); }
+  .rail.heydealer { background: var(--rail-heydealer); }
+
+  .items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .items li { display: flex; flex-direction: column; gap: 2px; }
+  .items a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .items a:hover { text-decoration: underline; }
+  .items a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .item-meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  .item-stat {
+    font-family: 'Consolas', 'SFMono-Regular', ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .empty-note { font-size: 0.88rem; color: var(--text-muted); font-style: normal; }
+
+  .empty-state {
+    background: var(--bg-elevated);
+    border: 1px dashed var(--border);
+    border-radius: 4px;
+    padding: 40px 24px;
+    text-align: center;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .empty-state strong { color: var(--text); font-size: 1.05rem; }
+
+  footer {
+    text-align: center;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .entry { transition: box-shadow 0.15s ease; }
+  }
+</style>
+
+<div class="page">
+  <div class="masthead">
+    <div class="masthead-top">
+      <h1>데일리 브리핑</h1>
+      <span class="clock" id="lastUpdated"></span>
+    </div>
+    <div class="schedule-strip">
+      <span><b>☀️ 아침판</b> 매일 09:00 · 전날 20:00~09:00</span>
+      <span><b>🌙 저녁판</b> 매일 20:00 · 09:00~20:00</span>
+    </div>
+  </div>
+
+  <div class="calendar-card">
+    <div class="calendar-header">
+      <span class="calendar-title" id="calendarTitle"></span>
+      <div class="calendar-nav">
+        <button type="button" id="calPrev" aria-label="이전 달">◀</button>
+        <button type="button" id="calNext" aria-label="다음 달">▶</button>
+      </div>
+    </div>
+    <div class="calendar-grid" id="calendarGrid"></div>
+    <div class="calendar-filter-bar" id="filterBar">
+      <span id="filterLabel"></span>
+      <button type="button" id="calReset">전체 보기</button>
+    </div>
+  </div>
+
+  <div class="feed" id="feed"></div>
+
+  <footer>자동 생성 페이지 · 매일 오전 9시, 오후 8시에 업데이트됩니다. 날짜를 클릭하면 해당 브리핑만 볼 수 있습니다.</footer>
+</div>
+
+<script>
+  const ENTRIES = [
+    /* ENTRIES:START */
+    {
+      date: '2026-07-08',
+      edition: 'morning',
+      rangeLabel: '전날 20:00 ~ 오늘 09:00',
+      generatedAt: '10:10',
+      headline: '현대차그룹 자율주행 조직 개편, 기아·현대 여름 할인 소식과 함께 커뮤니티에서는 현대차 재고차 논란·자율주행(FSD) 화제글이 눈에 띕니다.',
+      carNews: [
+        { title: '현대차그룹, AVP 개발인력 200명 남양 복귀...상용화 중심으로 재편', url: 'https://www.mt.co.kr/amp/industry/2026/07/06/2026070310142281577', note: '자율주행·SDV 상용화 속도를 높이기 위해 첨단차플랫폼(AVP) 조직과 인력을 재배치했습니다. (2026.07.06 보도)' },
+        { title: '기아, \'2026 CEO 인베스터 데이\' 개최', url: 'https://worldwide.kia.com/ko/newsroom-korea/view/?id=1506', note: '친환경차 풀라인업 확대와 미래 사업 강화를 통한 초과 성장 전략을 발표했습니다.' },
+        { title: '현대차 썸머 페스타, 팰리세이드·쏘나타 등 최대 300만원 할인', url: 'https://web.getcha.kr/articles/auto-cashback-car-release-schedule', note: '여름 휴가철 프로모션으로 쏘나타·싼타페 구매 시 유류비 지원도 추가 제공됩니다.' },
+      ],
+      communityPosts: [
+        { community: '보배드림', title: '현대 재고차 샀다가 벌어진 일', url: 'https://www.bobaedream.co.kr/view?code=best&No=1007214', stat: '조회 4,935 · 댓글 18' },
+        { community: '보배드림', title: '신호 위반 차량에 9살 아이 참변... 운전자는 기억 안 나', url: 'https://www.bobaedream.co.kr/view?code=best&No=1007204', stat: '조회 4,963 · 댓글 13' },
+        { community: '클리앙', title: 'FSD 자율주행 한국에서 승인되어야한다고 생각하나요?', url: 'https://www.clien.net/service/board/park/19222833', stat: '조회 1,588 · 추천 37' },
+        { community: '클리앙', title: '이틀 연속 터널내 접촉사고로 지각하니 빡치네요', url: 'https://www.clien.net/service/board/park/19222814', stat: '조회 1,189 · 추천 3' },
+      ],
+      heydealer: [],
+    },
+    /* ENTRIES:END */
+  ];
+
+  const SECTION_DEFS = [
+    { key: 'carNews', label: '자동차 업계 뉴스', rail: 'car' },
+    { key: 'communityPosts', label: '커뮤니티 인기글', rail: 'community' },
+    { key: 'heydealer', label: "'헤이딜러' 언급", rail: 'heydealer' },
+  ];
+
+  function escapeHtml(str) {
+    return String(str ?? '').replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+    }[c]));
+  }
+
+  function renderItems(key, list) {
+    if (!list || list.length === 0) {
+      return '<p class="empty-note">특이 소식 없음</p>';
+    }
+    return '<ul class="items">' + list.map((item) => {
+      const meta = [item.community, item.stat, item.note].filter(Boolean).map(escapeHtml).join(' · ');
+      return `<li>
+        <a href="${escapeHtml(item.url || '#')}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a>
+        ${meta ? `<span class="item-meta">${meta}</span>` : ''}
+      </li>`;
+    }).join('') + '</ul>';
+  }
+
+  function renderEntry(entry) {
+    const editionLabel = entry.edition === 'morning' ? '☀️ 아침판' : '🌙 저녁판';
+    return `
+      <article class="entry">
+        <div class="entry-header">
+          <div class="entry-edition">
+            <span class="edition-dot"></span>
+            <span class="label">${escapeHtml(editionLabel)}</span>
+            <span class="range">${escapeHtml(entry.rangeLabel || '')}</span>
+          </div>
+          <span class="entry-date">${escapeHtml(entry.date)} ${escapeHtml(entry.generatedAt || '')}</span>
+        </div>
+        ${entry.headline ? `<div class="headline">${escapeHtml(entry.headline)}</div>` : ''}
+        ${SECTION_DEFS.map((def) => `
+          <div class="section">
+            <div class="section-label"><span class="rail ${def.rail}"></span>${def.label}</div>
+            ${renderItems(def.key, entry[def.key])}
+          </div>
+        `).join('')}
+      </article>
+    `;
+  }
+
+  const feedEl = document.getElementById('feed');
+  let selectedDate = null;
+
+  function renderFeed() {
+    const list = selectedDate ? ENTRIES.filter((e) => e.date === selectedDate) : ENTRIES;
+    const filterBar = document.getElementById('filterBar');
+    const filterLabel = document.getElementById('filterLabel');
+
+    if (selectedDate) {
+      filterBar.style.display = 'flex';
+      filterLabel.textContent = `${selectedDate} 브리핑만 보는 중`;
+    } else {
+      filterBar.style.display = 'none';
+    }
+
+    if (ENTRIES.length === 0) {
+      feedEl.innerHTML = `
+        <div class="empty-state">
+          <strong>아직 첫 브리핑이 도착하지 않았습니다</strong>
+          <span>매일 오전 9시와 오후 8시에 자동으로 이 페이지가 업데이트됩니다.</span>
+        </div>
+      `;
+    } else if (list.length === 0) {
+      feedEl.innerHTML = `
+        <div class="empty-state">
+          <strong>${escapeHtml(selectedDate)}에는 브리핑이 없습니다</strong>
+        </div>
+      `;
+    } else {
+      feedEl.innerHTML = list.map(renderEntry).join('');
+    }
+  }
+
+  const lastUpdatedEl = document.getElementById('lastUpdated');
+  if (ENTRIES.length > 0) {
+    lastUpdatedEl.textContent = `최근 업데이트 · ${ENTRIES[0].date} ${ENTRIES[0].generatedAt || ''}`;
+  }
+
+  // 캘린더: 날짜를 눌러 그 날의 아침판/저녁판만 다시 볼 수 있게 한다.
+  const DOW = ['일', '월', '화', '수', '목', '금', '토'];
+  const entriesByDate = {};
+  ENTRIES.forEach((e) => {
+    if (!entriesByDate[e.date]) entriesByDate[e.date] = {};
+    entriesByDate[e.date][e.edition] = true;
+  });
+
+  function pad2(n) { return String(n).padStart(2, '0'); }
+  function dateKey(y, m, d) { return `${y}-${pad2(m + 1)}-${pad2(d)}`; }
+
+  let calYear, calMonthIdx;
+  if (ENTRIES.length > 0) {
+    const [y, m] = ENTRIES[0].date.split('-').map(Number);
+    calYear = y;
+    calMonthIdx = m - 1;
+  } else {
+    const now = new Date();
+    calYear = now.getFullYear();
+    calMonthIdx = now.getMonth();
+  }
+
+  function renderCalendar() {
+    document.getElementById('calendarTitle').textContent = `${calYear}년 ${calMonthIdx + 1}월`;
+    const grid = document.getElementById('calendarGrid');
+    const firstDow = new Date(calYear, calMonthIdx, 1).getDay();
+    const daysInMonth = new Date(calYear, calMonthIdx + 1, 0).getDate();
+
+    let html = DOW.map((d) => `<div class="calendar-dow">${d}</div>`).join('');
+    for (let i = 0; i < firstDow; i++) {
+      html += '<div class="calendar-day empty"></div>';
+    }
+    for (let day = 1; day <= daysInMonth; day++) {
+      const key = dateKey(calYear, calMonthIdx, day);
+      const info = entriesByDate[key];
+      const hasEntry = !!info;
+      const isSelected = key === selectedDate;
+      const dots = hasEntry
+        ? `<span class="calendar-dots">${info.morning ? '☀️' : ''}${info.evening ? '🌙' : ''}</span>`
+        : '';
+      const classes = ['calendar-day', hasEntry ? 'has-entry' : '', isSelected ? 'selected' : ''].filter(Boolean).join(' ');
+      html += `<div class="${classes}" data-date="${hasEntry ? key : ''}">${day}${dots}</div>`;
+    }
+    grid.innerHTML = html;
+
+    grid.querySelectorAll('.calendar-day.has-entry').forEach((el) => {
+      el.addEventListener('click', () => {
+        const date = el.getAttribute('data-date');
+        selectedDate = selectedDate === date ? null : date;
+        renderCalendar();
+        renderFeed();
+      });
+    });
+  }
+
+  document.getElementById('calPrev').addEventListener('click', () => {
+    calMonthIdx -= 1;
+    if (calMonthIdx < 0) { calMonthIdx = 11; calYear -= 1; }
+    renderCalendar();
+  });
+  document.getElementById('calNext').addEventListener('click', () => {
+    calMonthIdx += 1;
+    if (calMonthIdx > 11) { calMonthIdx = 0; calYear += 1; }
+    renderCalendar();
+  });
+  document.getElementById('calReset').addEventListener('click', () => {
+    selectedDate = null;
+    renderCalendar();
+    renderFeed();
+  });
+
+  renderCalendar();
+  renderFeed();
+</script>
