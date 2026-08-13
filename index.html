@@ -286,6 +286,28 @@
     border-bottom: 1px solid var(--border);
     text-wrap: balance;
   }
+  .headline-lead { margin: 0; line-height: 1.5; }
+  .key-points {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .key-points li { display: flex; gap: 8px; line-height: 1.5; }
+  .key-points li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 4px;
+    height: 4px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .kp-impact { color: var(--text-muted); font-weight: 400; }
 
   .section { padding: 14px 18px; border-bottom: 1px solid var(--border); }
   .section:last-child { border-bottom: none; }
@@ -397,6 +419,33 @@
 <script>
   const ENTRIES = [
     /* ENTRIES:START */
+    {
+      date: '2026-08-13',
+      edition: 'morning',
+      rangeLabel: '전날 18:00 ~ 오늘 09:30',
+      generatedAt: '09:45',
+      headline: '제네시스가 GV80에 처음 얹을 차세대 2.5 터보 하이브리드를 공개했습니다(352마력, 연비 25%↑).',
+      keyPoints: [
+        '쏘카, 하반기 모델Y 800대·아토3 100대 도입 → 2~3년 뒤 중고 전기차 물량 급증',
+        '중국산 車부품 수입 상반기 14.4억달러로 역대 최대 → 상품화 부품 조달·단가 변화',
+      ],
+      carNews: [
+        { title: '제네시스, 차세대 하이브리드 시스템 공개… \'GV80\' 첫 탑재', url: 'https://v.daum.net/v/20260813092909023', note: '제네시스가 차세대 2.5 터보 하이브리드를 공개했습니다. 합산 352마력·54.0kgf·m으로 기존 2.5 터보보다 출력 16%·토크 26% 높고 연비는 25% 이상 좋아졌습니다. 다음 달 나오는 GV80에 먼저 들어가므로, 기존 GV80 가솔린 매물의 시세 기준을 다시 볼 필요가 있습니다.' },
+        { title: '쏘카, 테슬라 모델Y 800대·BYD 아토3 100대 새로 들인다', url: 'https://v.daum.net/v/20260813085340503', note: '쏘카가 하반기에 모델Y 약 800대와 아토3 약 100대를 새로 넣어 연말까지 운영 차량의 14%를 전기차로 채웁니다. 전기차가 유지비는 34% 낮고 수익성은 53% 높다는 것이 이유입니다. 카셰어링 차량은 2~3년 뒤 중고로 대량 풀리므로 전기차 매입 물량이 늘어난다는 신호입니다.' },
+        { title: '테슬라·BYD 잘 나가는 한국…중국산 자동차 부품 수입 역대 최대', url: 'https://v.daum.net/v/20260813085752647', note: '올 상반기 중국산 자동차 부품 수입액이 14억3,900만 달러로 전년 대비 15.3% 늘어 역대 최대입니다. 국내 신규 등록 전기차의 35%가 중국산(모델Y·BYD 등)인 영향입니다. 앞으로 상품화 때 쓰는 부품 조달처와 단가 구조가 바뀔 수 있습니다.' },
+        { title: '[미르의 글로벌 레이더] 잘 팔려서 공장이 모자란다…기아, 인도공장 또 키운다', url: 'https://v.daum.net/v/20260813084814334', note: '기아 인도 판매가 1~7월 19만1,949대로 17% 늘어 생산능력 확대를 검토 중입니다. 2030년 연 41만대가 목표이고, 신차 10종 중 8종을 전동화로 채울 계획입니다. 인도를 판매시장에서 수출 거점으로 바꾸려는 흐름입니다.' },
+      ],
+      communityPosts: [
+        { community: '뽐뿌 자동차게시판', title: '테슬라9 주행거리 문제 이슈 발생', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=974725', stat: '조회 10,757 · 추천 58 (오늘 03:48 등록, 테슬라 주행거리 표시 관련 문제 제기)' },
+        { community: '클리앙 굴러간당', title: '\'옆에 이 車 보이면 무조건 피한다\'…\'문콕\' 스트레스에 비명', url: 'https://www.clien.net/service/board/cm_car/19246111', stat: '조회 2,485 · 댓글 13 (어제 23:45 등록, 주차장 문콕 피해와 차종별 회피 심리 토론)' },
+        { community: '클리앙 굴러간당', title: '모델3 스탠다드 승차감에 놀란 이야기', url: 'https://www.clien.net/service/board/cm_car/19246086', stat: '조회 2,442 · 댓글 21 (어제 22:43 등록, 테슬라 보급형 트림 승차감 체험담)' },
+        { community: '클리앙 굴러간당', title: '픽플러스에서 브랜드별 외판 두께를 측정했군요', url: 'https://www.clien.net/service/board/cm_car/19246028', stat: '조회 2,343 · 댓글 23 (어제 19:54 등록, 제조사별 차체 강판 두께 비교 결과 논의)' },
+        { community: '클리앙 굴러간당', title: '아반떼 신형 깡통에 계기판 빠지는거 중요한거 아닌가봐요???', url: 'https://www.clien.net/service/board/cm_car/19246098', stat: '조회 2,332 · 댓글 30 (어제 23:09 등록, 신형 아반떼 기본트림 사양 축소 논쟁)' },
+        { community: '보배드림 자유게시판', title: '우선 싸다고 팔린 중국전기차-유럽에서 장난아님', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3428548', stat: '조회 330 · 댓글 1 (오늘 08:14 등록, 유럽 시장 중국 전기차 판매 확대 이야기)' },
+        { community: '보배드림 국산차게시판', title: '2028 GV80 하이브리드 공식 0~100km/h', url: 'https://www.bobaedream.co.kr/view?code=national&No=2413553', stat: '조회 63 (오늘 09:18 등록, 신형 GV80 하이브리드 가속 성능 공유)' },
+      ],
+      heydealer: [],
+    },
     {
       date: '2026-08-12',
       edition: 'evening',
@@ -2239,6 +2288,30 @@
     }).join('') + '</ul>';
   }
 
+  function renderKeyPoints(points) {
+    if (!points || points.length === 0) {
+      return '';
+    }
+    return '<ul class="key-points">' + points.map((point) => {
+      const text = String(point);
+      const arrowAt = text.indexOf('→');
+      const fact = (arrowAt === -1 ? text : text.slice(0, arrowAt)).trim();
+      const impact = arrowAt === -1 ? '' : text.slice(arrowAt + 1).trim();
+      return `<li><span>${escapeHtml(fact)}${impact ? ` <span class="kp-impact">→ ${escapeHtml(impact)}</span>` : ''}</span></li>`;
+    }).join('') + '</ul>';
+  }
+
+  function renderHeadline(entry) {
+    const keyPoints = renderKeyPoints(entry.keyPoints);
+    if (!entry.headline && !keyPoints) {
+      return '';
+    }
+    return `<div class="headline">
+      ${entry.headline ? `<p class="headline-lead">${escapeHtml(entry.headline)}</p>` : ''}
+      ${keyPoints}
+    </div>`;
+  }
+
   function renderEntry(entry) {
     const EDITION_LABELS = { morning: '☀️ 조간', midday: '🌤️ 주간', evening: '🌙 석간' };
     const editionLabel = EDITION_LABELS[entry.edition] || entry.edition;
@@ -2252,7 +2325,7 @@
           </div>
           <span class="entry-date">${escapeHtml(entry.date)} ${escapeHtml(entry.generatedAt || '')}</span>
         </div>
-        ${entry.headline ? `<div class="headline">${escapeHtml(entry.headline)}</div>` : ''}
+        ${renderHeadline(entry)}
         ${SECTION_DEFS.map((def) => `
           <div class="section section-${def.rail}">
             <div class="section-label"><span class="rail ${def.rail}"></span>${def.label}</div>
