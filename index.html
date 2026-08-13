@@ -287,27 +287,45 @@
     text-wrap: balance;
   }
   .headline-lead { margin: 0; line-height: 1.5; }
-  .key-points {
+  .brief-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .brief-list {
     list-style: none;
-    margin: 10px 0 0;
+    margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    gap: 14px;
   }
-  .key-points li { display: flex; gap: 8px; line-height: 1.5; }
-  .key-points li::before {
-    content: '';
+  .brief-item { display: flex; gap: 10px; align-items: flex-start; }
+  .brief-num {
     flex-shrink: 0;
-    width: 4px;
-    height: 4px;
-    margin-top: 8px;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
     border-radius: 50%;
     background: var(--accent);
+    color: var(--bg-elevated);
+    font-family: 'Consolas', 'SFMono-Regular', ui-monospace, monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .kp-impact { color: var(--text-muted); font-weight: 400; }
+  .brief-text { display: flex; flex-direction: column; gap: 3px; }
+  .brief-fact { font-weight: 700; line-height: 1.45; }
+  .brief-impact {
+    font-size: 0.88rem;
+    font-weight: 400;
+    line-height: 1.45;
+    color: var(--text-muted);
+  }
 
   .section { padding: 14px 18px; border-bottom: 1px solid var(--border); }
   .section:last-child { border-bottom: none; }
@@ -424,10 +442,10 @@
       edition: 'morning',
       rangeLabel: '전날 18:00 ~ 오늘 09:30',
       generatedAt: '09:45',
-      headline: '제네시스가 GV80에 처음 얹을 차세대 2.5 터보 하이브리드를 공개했습니다(352마력, 연비 25%↑).',
+      headline: '제네시스가 차세대 2.5 터보 하이브리드를 공개했습니다(352마력, 연비 25%↑). 다음 달 GV80에 먼저 들어갑니다. → 신형이 나오기 전에 기존 GV80 가솔린 매입가 기준을 다시 잡아야 합니다.',
       keyPoints: [
-        '쏘카, 하반기 모델Y 800대·아토3 100대 도입 → 2~3년 뒤 중고 전기차 물량 급증',
-        '중국산 車부품 수입 상반기 14.4억달러로 역대 최대 → 상품화 부품 조달·단가 변화',
+        '쏘카가 하반기에 모델Y 800대와 BYD 아토3 100대를 새로 넣습니다. → 카셰어링 차량은 2~3년 뒤 중고로 풀리므로 전기차 매입 물량이 늘어납니다.',
+        '중국산 자동차 부품 수입이 상반기 14억3,900만 달러로 역대 최대입니다. → 상품화에 쓰는 부품의 조달처와 단가 구조가 바뀔 수 있습니다.',
       ],
       carNews: [
         { title: '제네시스, 차세대 하이브리드 시스템 공개… \'GV80\' 첫 탑재', url: 'https://v.daum.net/v/20260813092909023', note: '제네시스가 차세대 2.5 터보 하이브리드를 공개했습니다. 합산 352마력·54.0kgf·m으로 기존 2.5 터보보다 출력 16%·토크 26% 높고 연비는 25% 이상 좋아졌습니다. 다음 달 나오는 GV80에 먼저 들어가므로, 기존 GV80 가솔린 매물의 시세 기준을 다시 볼 필요가 있습니다.' },
@@ -2288,27 +2306,32 @@
     }).join('') + '</ul>';
   }
 
-  function renderKeyPoints(points) {
-    if (!points || points.length === 0) {
-      return '';
-    }
-    return '<ul class="key-points">' + points.map((point) => {
-      const text = String(point);
-      const arrowAt = text.indexOf('→');
-      const fact = (arrowAt === -1 ? text : text.slice(0, arrowAt)).trim();
-      const impact = arrowAt === -1 ? '' : text.slice(arrowAt + 1).trim();
-      return `<li><span>${escapeHtml(fact)}${impact ? ` <span class="kp-impact">→ ${escapeHtml(impact)}</span>` : ''}</span></li>`;
-    }).join('') + '</ul>';
+  function renderBriefItem(point, index) {
+    const text = String(point);
+    const arrowAt = text.indexOf('→');
+    const fact = (arrowAt === -1 ? text : text.slice(0, arrowAt)).trim();
+    const impact = arrowAt === -1 ? '' : text.slice(arrowAt + 1).trim();
+    return `<li class="brief-item">
+      <span class="brief-num">${index + 1}</span>
+      <span class="brief-text">
+        <span class="brief-fact">${escapeHtml(fact)}</span>
+        ${impact ? `<span class="brief-impact">${escapeHtml(impact)}</span>` : ''}
+      </span>
+    </li>`;
   }
 
   function renderHeadline(entry) {
-    const keyPoints = renderKeyPoints(entry.keyPoints);
-    if (!entry.headline && !keyPoints) {
+    const points = entry.keyPoints || [];
+    if (!entry.headline && points.length === 0) {
       return '';
     }
+    if (points.length === 0) {
+      return `<div class="headline"><p class="headline-lead">${escapeHtml(entry.headline)}</p></div>`;
+    }
+    const items = (entry.headline ? [entry.headline] : []).concat(points);
     return `<div class="headline">
-      ${entry.headline ? `<p class="headline-lead">${escapeHtml(entry.headline)}</p>` : ''}
-      ${keyPoints}
+      <div class="brief-label">이번 판 핵심</div>
+      <ol class="brief-list">${items.map(renderBriefItem).join('')}</ol>
     </div>`;
   }
 
