@@ -12,7 +12,6 @@
     --accent-soft: #f6e4cd;
     --rail-car: #2f6e8f;
     --rail-community: #6b7280;
-    --rail-heydealer: #c96a12;
     --shadow: 0 1px 2px rgba(20, 24, 28, 0.06), 0 8px 24px rgba(20, 24, 28, 0.05);
   }
   @media (prefers-color-scheme: dark) {
@@ -26,7 +25,6 @@
       --accent-soft: #3a2b14;
       --rail-car: #6fb6d8;
       --rail-community: #8b93a0;
-      --rail-heydealer: #f2a134;
       --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
     }
   }
@@ -40,7 +38,6 @@
     --accent-soft: #3a2b14;
     --rail-car: #6fb6d8;
     --rail-community: #8b93a0;
-    --rail-heydealer: #f2a134;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
   }
   :root[data-theme="light"] {
@@ -53,7 +50,6 @@
     --accent-soft: #f6e4cd;
     --rail-car: #2f6e8f;
     --rail-community: #6b7280;
-    --rail-heydealer: #c96a12;
     --shadow: 0 1px 2px rgba(20, 24, 28, 0.06), 0 8px 24px rgba(20, 24, 28, 0.05);
   }
 
@@ -349,7 +345,6 @@
   }
   .rail.car { background: var(--rail-car); }
   .rail.community { background: var(--rail-community); }
-  .rail.heydealer { background: var(--rail-heydealer); }
 
   .items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
   .items li { display: flex; flex-direction: column; gap: 2px; }
@@ -463,7 +458,6 @@
         { community: '클리앙 굴러간당', title: '테슬라 hw3의 신호등 인식 오류', url: 'https://www.clien.net/service/board/cm_car/19257625', stat: '조회 1,527 · 댓글 25 (오늘 03:09 등록, 구형 자율주행 하드웨어의 인식 오류 사례 공유)' },
         { community: '클리앙 굴러간당', title: '중국차 수입국 top10 (2026. H1)', url: 'https://www.clien.net/service/board/cm_car/19257630', stat: '조회 1,139 · 댓글 3 (오늘 05:50 등록, 상반기 중국차 수입 상위 국가를 정리한 글)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-09-02',
@@ -490,7 +484,6 @@
         { community: '보배드림 국산차게시판', title: '중고감가방어 잘되는 차량순위', url: 'https://www.bobaedream.co.kr/view?code=national&No=2415527', stat: '조회 309 · 댓글 6 (오늘 17:39 등록, 감가가 적게 붙는 차종 순위를 두고 오간 토론)' },
         { community: '보배드림 국산차게시판', title: '누수 잡았습니다.', url: 'https://www.bobaedream.co.kr/view?code=national&No=2415523', stat: '조회 1,645 · 추천 35 · 댓글 14 (오늘 16:48 등록, 차량 누수 원인을 직접 찾아 수리한 후기)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-09-02',
@@ -518,7 +511,6 @@
         { community: '보배드림 자동차뉴스/토론', title: 'BYD, 스텔란티스의 놀고 있는 캐나다 공장 인수 문의', url: 'https://www.bobaedream.co.kr/view?code=cnews&No=3423', stat: '조회 4,264 · 추천 23 · 댓글 8 (오늘 09:42 등록, BYD의 북미 생산거점 확보 시도 소식 공유)' },
         { community: '보배드림 국산차게시판', title: '경험담 - 메xx화재 중고차 보증보험', url: 'https://www.bobaedream.co.kr/view?code=national&No=2415490', stat: '조회 169 · 추천 2 · 댓글 2 (오늘 11:07 등록, 중고차 보증보험을 실제로 써 본 경험담)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-09-02',
@@ -545,9 +537,6 @@
         { community: '클리앙 굴러간당', title: '15년식 8세대 말리부 디젤 정비 견적 250만원... 고쳐서 탈까요?', url: 'https://www.clien.net/service/board/cm_car/19257183', stat: '조회 192 · 댓글 6 (오늘 09:11 등록, 노후 차량 수리비와 차량 가치를 저울질하는 상담)' },
         { community: '보배드림 국산차게시판', title: '26년8월 국산차판매량', url: 'https://www.bobaedream.co.kr/view?code=national&No=2415473', stat: '조회 478 · 댓글 2 (오늘 01:24 등록, 8월 국산차 모델별 판매 실적표 공유)' },
         { community: '보배드림 자유게시판', title: '도장면 흘러내림 이거 어떻게해야할까요', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3433590', stat: '조회 421 · 댓글 3 (오늘 05:59 등록, 재도색 뒤 페인트가 흘러내린 상태를 두고 조언을 구한 글)' },
-      ],
-      heydealer: [
-        { title: '중고차 직거래 시 헤이딜러 견적가에서 몇% 정도 더하면 괜찮은 거래일까요?', url: 'https://www.clien.net/service/board/cm_car/19256891', note: '헤이딜러 견적을 직거래 가격의 기준선으로 삼는 글입니다. 댓글에서는 국산차 기준 50~100만원, 업자 매입가 대비로는 100~200만원을 더 붙인다는 의견이 나왔습니다. 부정적 언급은 아니지만 견적가가 시장 기준값으로 쓰이는 흐름을 보여줍니다. (클리앙 굴러간당, 2026.09.01 15:55)' },
       ],
     },
     {
@@ -576,7 +565,6 @@
         { community: '보배드림 자유게시판', title: '직좌 차선에서 좌회전 했다가 사고날 뻔 했는데요..', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3433428', stat: '조회 208 · 댓글 13 (오늘 12:36 등록, 직진·좌회전 겸용 차선에서 겪은 아찔한 상황을 묻는 글)' },
         { community: '보배드림 자유게시판', title: 'LPI차량 가스 누설 문제', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3433419', stat: '조회 223 · 추천 1 (오늘 11:54 등록, LPI 차량에서 가스가 새는 증상을 상담한 글)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-09-01',
@@ -604,7 +592,6 @@
         { community: '클리앙 굴러간당', title: '벤츠 cla 일렉트릭 사전계약 시작', url: 'https://www.clien.net/service/board/cm_car/19256646', stat: '조회 400 · 댓글 1 (오늘 08:57 등록, 벤츠 전기 CLA 사전계약 소식 공유)' },
         { community: '보배드림 자유게시판', title: '출고인증은 무사고쥬??', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3433366', stat: '조회 1,504 · 추천 64 · 댓글 3 (오늘 05:10 등록, 26년형 EV9 리스 출고 인증 글)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-31',
@@ -632,7 +619,6 @@
         { community: '보배드림 자유게시판', title: '팰리세이드 오르막길 엔진 폭주(오버런) 발생 및 보증 수리 조언...', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3433274', stat: '조회 175 · 댓글 2 (오늘 17:18 등록, 오르막에서 엔진 회전이 치솟는 증상과 보증 수리를 묻는 글)' },
         { community: '보배드림 자유게시판', title: '제네시스 G80(DH) 앞 범퍼 긁힘 수리비가 이렇게 비싼가요??', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3433269', stat: '조회 185 · 댓글 11 (오늘 17:06 등록, 범퍼 흠집 수리 견적이 과한지 묻는 상담)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-31',
@@ -659,7 +645,6 @@
         { community: '보배드림 국산차게시판', title: 'K8중고차 구매 하려하는데, 의견좀 요청드립니다.', url: 'https://www.bobaedream.co.kr/view?code=national&No=2415310', stat: '조회 240 · 댓글 9 (오늘 09:43 등록, K8 중고차 연식·트림 선택을 묻는 상담)' },
         { community: '뽐뿌 자동차게시판', title: '테슬라 FSD LITE의 한계점에 관한 사용자 후기', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=976079', stat: '조회 2,870 · 추천 78 (오늘 10:31 등록, 테슬라 FSD 간소화 버전을 써 보고 아쉬운 점을 정리한 글)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-31',
@@ -687,7 +672,6 @@
         { community: '클리앙 굴러간당', title: '카니발 렌트를 하루 썼는데.', url: 'https://www.clien.net/service/board/cm_car/19256089', stat: '조회 933 · 댓글 5 (오늘 07:24 등록, 카니발을 하루 빌려 타본 소감)' },
         { community: '보배드림 국산차게시판', title: 'PV7 공개되는군요', url: 'https://www.bobaedream.co.kr/view?code=national&No=2415301', stat: '조회 268 (오늘 08:33 등록, 기아 대형 전동 PBV PV7 공개 소식 공유)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-28',
@@ -715,7 +699,6 @@
         { community: '보배드림 자유게시판', title: '장림의 한 주유소에서 혼유사고 났다고 하는데', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3432599', stat: '조회 3,813 · 댓글 16 (오늘 16:09 등록, 주유소 혼유 사고 처리와 책임을 두고 오간 논의)' },
         { community: '보배드림 국산차게시판', title: 'G90리무진 GV90 나오면 나를 고마워하시라', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414970', stat: '조회 360 · 댓글 6 (오늘 15:37 등록, GV90 출시 뒤 기존 대형 세단 위치를 전망한 글)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-28',
@@ -743,7 +726,6 @@
         { community: '보배드림 국산차게시판', title: '전기차 11키로 충전기 직접 설치', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414937', stat: '조회 284 · 댓글 5 (오늘 11:13 등록, 가정용 충전기를 직접 설치한 경험담)' },
         { community: '보배드림 국산차게시판', title: '아산에서 전기차 구매하기 힘드네요', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414954', stat: '조회 139 · 댓글 4 (오늘 12:53 등록, 지역에서 전기차 사기가 어렵다는 불만)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-28',
@@ -771,7 +753,6 @@
         { community: '보배드림 국산차게시판', title: '아반떼 제로백 11초대 ㅋㅋㅋ 예전 8세대 말리부랑 같네', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414913', stat: '조회 189 · 댓글 5 (오늘 08:30 등록, 신형 아반떼 가속 성능이 기대에 못 미친다는 반응)' },
         { community: '뽐뿌 자동차게시판', title: '현대차 공식몰 중고차 가격, 괜찮네요', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=975867', stat: '조회 1,066 · 댓글 11 (오늘 08:32 등록, 현대 인증중고차 판매가를 두고 갈린 평가)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-27',
@@ -799,7 +780,6 @@
         { community: '보배드림 수입차게시판', title: 'BMW 리스 계약 당시 "나중에 처리해준다"던 주행거리 패널티…', url: 'https://www.bobaedream.co.kr/view?code=import&No=714940', stat: '조회 102 · 댓글 2 (오늘 15:39 등록, 리스 만기 주행거리 위약금을 두고 생긴 분쟁 사연)' },
         { community: '뽐뿌 자동차게시판', title: '2300만원 중고차 거래', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&page=1&divpage=183&no=975825', stat: '조회 9,824 · 댓글 2 (오늘 15:45 등록, 2,300만원대 중고차 거래 사례 공유)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-27',
@@ -827,7 +807,6 @@
         { community: '보배드림 국산차게시판', title: '아반떼HD 내구성 ㅈ되네요', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414829', stat: '조회 424 · 댓글 8 (오늘 11:02 등록, 오래된 아반떼HD 내구성을 두고 갈린 반응)' },
         { community: '보배드림 자유게시판', title: '후륜은 위험하고, 4륜이 좋다고?', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3432265', stat: '조회 165 · 댓글 4 (오늘 13:20 등록, 후륜구동이 위험하다는 통념을 반박하는 글)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-27',
@@ -855,7 +834,6 @@
         { community: '클리앙 굴러간당', title: '어제 아반떼 시승기 관람 소감', url: 'https://www.clien.net/service/board/cm_car/19254155', stat: '조회 282 · 댓글 6 (오늘 09:18 등록, 신형 아반떼가 값에 비해 성능이 아쉽다는 평가)' },
         { community: '보배드림 국산차게시판', title: '사이드 미러가 갑자기 안펴짐다 ㅁㅊ ㅠㅠㅠㅠ', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414811', stat: '조회 235 · 댓글 15 (오늘 07:39 등록, 사이드미러 자동 접힘 고장으로 당황한 사연)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-26',
@@ -883,9 +861,6 @@
         { community: '보배드림 국산차게시판', title: '왜 난 이상하지.. GV90', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414784', stat: '조회 156 · 댓글 9 (오늘 17:39 등록, GV90 디자인 호불호를 두고 갈린 반응)' },
         { community: '뽐뿌 자동차게시판', title: '신차 리스 기간 완료 후 구매 여부', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&page=1&divpage=183&no=975745', stat: '조회 1,112 · 댓글 7 (오늘 16:30 등록, 리스 만기 차량을 인수할지 처분할지 묻는 상담)' },
       ],
-      heydealer: [
-        { title: '중고차 판매 방식 추천', url: 'https://www.clien.net/service/board/cm_car/19253900', note: '수입차 3대를 한 번에 처분하려는 사람이 엔카·헤이딜러 같은 앱과 동호회 카페 중 무엇이 나은지 물었습니다. 댓글에서는 번거로움이 적다며 헤이딜러 역경매를 추천했습니다 (클리앙 굴러간당, 2026.08.26 17:18, 긍정적 언급).' },
-      ],
     },
     {
       date: '2026-08-26',
@@ -912,7 +887,6 @@
         { community: '보배드림 국산차게시판', title: '1년에 만키로 운행이면 전기차 비추 인가요?', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414739', stat: '조회 244 · 댓글 5 (오늘 09:36 등록, 주행거리가 짧을 때 전기차가 유리한지 문답)' },
         { community: '보배드림 국산차게시판', title: 'GV80 시동 불량, 방전, 암전류 등 문제', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414743', stat: '조회 233 · 댓글 2 (오늘 10:23 등록, 반복되는 방전·암전류 증상 상담)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-26',
@@ -938,7 +912,6 @@
         { community: '보배드림 국산차게시판', title: '신형 아반떼 시승차', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414728', stat: '조회 297 · 댓글 1 (오늘 07:46 등록, 신형 아반떼 실물 시승차 목격 사진)' },
         { community: '보배드림 국산차게시판', title: '첫차 잘탓는데 이제보내줘야겟죠', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414721', stat: '조회 266 · 댓글 3 (오늘 05:41 등록, 첫차를 언제 처분할지 고민하는 글)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-25',
@@ -965,7 +938,6 @@
         { community: '보배드림 국산차게시판', title: '이 차 연식 아시는 분?', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414686', stat: '조회 167 · 댓글 25 (오늘 17:09 등록, 사진만으로 차량 연식을 가려내는 문답)' },
         { community: '보배드림 국산차게시판', title: '중앙선 침범 9만원', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414674', stat: '조회 181 · 댓글 4 (오늘 14:56 등록, 중앙선 침범 과태료 처분 사례 공유)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-25',
@@ -992,7 +964,6 @@
         { community: '클리앙 굴러간당', title: '타이어 갈며 느끼는 불편함 & 전과 바뀐 타이어 유통구조?', url: 'https://www.clien.net/service/board/cm_car/19253196', stat: '조회 533 · 댓글 8 (오늘 11:58 등록, 타이어 값·장착점 구조가 달라졌다는 체감기)' },
         { community: '보배드림 국산차게시판', title: '1000만원으로 꼭 한대를 사야한다면?', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414653', stat: '조회 180 · 댓글 6 (오늘 12:11 등록, 1천만원대 중고차 차종 추천 상담)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-25',
@@ -1020,9 +991,6 @@
         { community: '보배드림 국산차게시판', title: '타이어 한쪽 바람빠진걸로 4짝을 바꾸라고했다네요', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414621', stat: '조회 823 · 댓글 9 (오늘 07:56 등록, 정비소의 과잉 교체 권유를 지적한 글)' },
         { community: '보배드림 자유게시판', title: '차수리비 이게 맞나요? 제네시스dh 저압연료펌프교체', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3431693', stat: '조회 161 · 댓글 2 (오늘 09:07 등록, 연료펌프 교체 견적이 적정한지 묻는 문의)' },
       ],
-      heydealer: [
-        { title: '중고차 팔때 경매금액 괜찮은 건지 봐주세요ㅜㅜ', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414609', note: '소나타 DN8(22년식, 3.6만km) 판매자가 엔카·KB차차차·당근·헤이딜러 견적을 비교하며 경매가가 시세보다 낮다고 상담한 글입니다. 댓글은 대부분 \'헤이딜러 제로\'를 추천하며 감정가 그대로 비대면으로 팔린다고 답했습니다 — 긍정적 언급 (보배드림 국산차게시판, 2026.08.24 22:26)' },
-      ],
     },
     {
       date: '2026-08-24',
@@ -1049,7 +1017,6 @@
         { community: '보배드림 국산차게시판', title: '현대자동차 스타리아 EV하자', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414576', stat: '조회 249 · 댓글 3 (오늘 16:29 등록, 전기 승합차 결함을 지적한 차주 제보)' },
         { community: '보배드림 자유게시판', title: '현직 정비 어드바이저입니다. OO보험사의 황당한 주말 렌트 거절', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3431571', stat: '조회 214 · 댓글 4 (오늘 17:06 등록, 정비 현장에서 겪은 보험사 렌트 처리 문제)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-24',
@@ -1076,7 +1043,6 @@
         { community: '클리앙 굴러간당', title: '요새 중고 모델3 모델Y를 찾아보고 있습니다', url: 'https://www.clien.net/service/board/cm_car/19252660', stat: '조회 459 · 댓글 8 (오늘 12:54 등록, 중고 전기차 시세와 매물 상태를 묻는 상담)' },
         { community: '보배드림 국산차게시판', title: '중고차 사고상태 어느 말이 맞을까요?', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414549', stat: '조회 230 · 댓글 6 (오늘 11:06 등록, 같은 차를 두고 사고 이력 설명이 엇갈린다는 문의)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-24',
@@ -1104,7 +1070,6 @@
         { community: '보배드림 국산차게시판', title: '4인가족차량 제니시스비교좀요', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414531', stat: '조회 604 · 댓글 13 (오늘 01:24 등록, 가족용 제네시스 차종을 두고 고민하는 구매 상담)' },
         { community: '보배드림 자유게시판', title: '중고차 성능점검기록부', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3431415', stat: '조회 418 · 댓글 2 (오늘 04:58 등록, 중고차 성능점검기록부를 어떻게 봐야 하는지 문의)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-20',
@@ -1132,7 +1097,6 @@
         { community: '보배드림 국산차게시판', title: '토레스 evx 심각한 결함글 이후 어떻게 되었는지 아시는분?', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414244', stat: '조회 256 · 댓글 0 (오늘 15:22 등록, 전기 SUV 결함 제보의 후속 처리를 묻는 글)' },
         { community: '뽐뿌 자동차게시판', title: '신규 자동차 제네시스 구매 관련', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=975344', stat: '조회 5,442 · 댓글 41 (오늘 16:29 등록, 제네시스 신차 구매를 두고 받은 조언 토론)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-20',
@@ -1158,7 +1122,6 @@
         { community: '보배드림 국산차게시판', title: '카니발1.6하브 펠리2.5하브 고민추천좀해주셔요', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414216', stat: '조회 295 · 댓글 13 (오늘 10:16 등록, 대형 하이브리드 두 차종을 두고 고민하는 구매 상담)' },
         { community: '보배드림 국산차게시판', title: '제네시스 품질이 이게 현실인가', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414234', stat: '조회 123 · 댓글 1 (오늘 13:27 등록, 신차 발표 전시차의 마감 불량을 지적)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-20',
@@ -1186,7 +1149,6 @@
         { community: '뽐뿌 자동차게시판', title: '"중고차량 or 신차량" 구매했을때 현명한 판단법', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=975289', stat: '조회 701 · 댓글 30 (오늘 08:34 등록, 중고차와 신차 중 무엇이 유리한지 토론)' },
         { community: '클리앙 굴러간당', title: '현대 블루핸즈 정비 후..(진행중)', url: 'https://www.clien.net/service/board/cm_car/19250722', stat: '조회 606 · 댓글 12 (오늘 08:21 등록, 공식 협력 정비소 처리 결과에 대한 불만)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-19',
@@ -1214,7 +1176,6 @@
         { community: '보배드림 국산차게시판', title: '도와주세요 제네시스 19년식 2.2 디젤 트랜스퍼케이스 구합니다', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414163', stat: '조회 247 · 댓글 4 (오늘 15:25 등록, 7년 된 차량의 구동계 부품 수급 문의)' },
         { community: '보배드림 국산차게시판', title: '중고차 둘중 선택한다면 어떤차가 좋을까요.', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414157', stat: '조회 190 · 댓글 8 (오늘 14:36 등록, 중고차 두 대를 두고 고민하는 구매 상담)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-19',
@@ -1242,7 +1203,6 @@
         { community: '보배드림 국산차게시판', title: '차를 도난당했습니다. 도와주세요.', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414148', stat: '조회 153 · 댓글 4 (오늘 12:57 등록, 차량 도난 피해 제보와 조언 요청)' },
         { community: '보배드림 자동차뉴스/토론', title: '상주영천고속도로 1차로 9중 추돌', url: 'https://www.bobaedream.co.kr/view?code=cnews&No=3349', stat: '조회 5,055 · 댓글 9 (오늘 12:08 등록, 고속도로 다중 추돌 사고 영상)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-19',
@@ -1270,7 +1230,6 @@
         { community: '보배드림 국산차게시판', title: '지금까지 몰랐던 현대차와 블루핸즈의 관계', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414126', stat: '조회 134 · 댓글 4 (오늘 08:53 등록, 공식 서비스망의 실제 운영 구조 설명)' },
         { community: '뽐뿌 자동차게시판', title: '테슬라 차주가 2년 동안 겪은 일들', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=975210', stat: '조회 31,467 · 댓글 100 (오늘 07:57 등록, 2년 보유 후 정리한 장단점 후기)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-18',
@@ -1298,7 +1257,6 @@
         { community: '보배드림 국산차게시판', title: '수입차는 수리비가 ㅎㄷㄷ 하네요', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414072', stat: '조회 544 · 댓글 6 (오늘 15:25 등록, 수입차 정비 견적 부담 토론)' },
         { community: '뽐뿌 자동차게시판', title: '새로산 아반떼 중고차값이 얼마나돼는데 추천좀 해주실분?', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=975192', stat: '조회 515 (오늘 17:19 등록, 주행 2만2천km 차량의 사고 후 감가 폭 문의)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-18',
@@ -1325,7 +1283,6 @@
         { community: '보배드림 국산차게시판', title: '22년식 sg2 니로 엔진 워터펌프 누수 판정으로...', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414056', stat: '조회 211 · 댓글 4 (오늘 10:03 등록, 4년 된 하이브리드 누수 수리 상담)' },
         { community: '보배드림 국산차게시판', title: '그저께 8.16일 차량 인수받고 어제 사이드미러 ppf 엉망인..', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414061', stat: '조회 172 · 댓글 3 (오늘 12:46 등록, 인수 직후 발견한 시공 품질 불만)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-18',
@@ -1353,7 +1310,6 @@
         { community: '보배드림 자유게시판', title: '출근길 첨보는데 타이어 짝짝이', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3429997', stat: '조회 345 · 댓글 4 (오늘 08:44 등록, 앞뒤 타이어 규격이 다른 차량 목격담)' },
         { community: '보배드림 국산차게시판', title: '중고차 250마넌짜리사서. 매년수리비 50들면', url: 'https://www.bobaedream.co.kr/view?code=national&No=2414040', stat: '조회 259 · 댓글 4 (오늘 03:52 등록, 저가 중고차의 수리비 부담을 따지는 토론)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-16',
@@ -1381,7 +1337,6 @@
         { community: '보배드림 국산차게시판', title: '쉐보레 2종 르노 3종 판매중이네요', url: 'https://www.bobaedream.co.kr/view?code=national&No=2413883', stat: '조회 191 · 댓글 2 (오늘 09:54 등록, 국내 판매 라인업이 줄어든 현황 공유)' },
         { community: '보배드림 자유게시판', title: '싼타페tm 18년식 도장 불량', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3429522', stat: '조회 110 · 댓글 2 (오늘 11:45 등록, 연식 지난 차량의 도장 상태 문제 상담)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-14',
@@ -1409,7 +1364,6 @@
         { community: '보배드림 국산차게시판', title: '르노코리아 중형 전기 SUV 는 폴스타4 SUV 급', url: 'https://www.bobaedream.co.kr/view?code=national&No=2413664', stat: '조회 215 (오늘 11:04 등록, 르노코리아 신형 전기 SUV 체급 추정)' },
         { community: '뽐뿌 자동차게시판', title: 'BYD 위안플러스 제원 정보', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=974833', stat: '조회 1,222 · 추천 30 (오늘 12:10 등록, BYD 신형 전기 SUV 제원 공유)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-14',
@@ -1437,7 +1391,6 @@
         { community: '보배드림 자유게시판', title: '사회초년생 중고차로 쏘나타 vs 아반떼', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3428911', stat: '조회 168 · 댓글 3 (오늘 10:07 등록, 첫 중고차 차종 선택 상담)' },
         { community: '뽐뿌 자동차게시판', title: 'byd 차량, 중고가치 떨어지나요?', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=974809', stat: '조회 255 (오늘 09:11 등록, 중국 전기차의 중고 잔존가치 문의)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-13',
@@ -1465,7 +1418,6 @@
         { community: '클리앙 굴러간당', title: '사고금액 90만원 환입 vs 유지 문의', url: 'https://www.clien.net/service/board/cm_car/19246409', stat: '조회 601 · 댓글 2 (오늘 14:35 등록, 보험 처리금을 돌려내고 사고이력을 지울지 상담)' },
         { community: '보배드림 자유게시판', title: '이 중고차 사도 될까요? 둘중에 뭘 살지..', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3428732', stat: '조회 90 (오늘 17:37 등록, 중고차 두 대 중 선택 상담)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-13',
@@ -1492,7 +1444,6 @@
         { community: '보배드림 국산차게시판', title: '2027 제네시스 GV80 하이브리드 디자인 및 파워트레인 공개', url: 'https://www.bobaedream.co.kr/view?code=national&No=2413558', stat: '조회 694 · 댓글 9 (오늘 09:53 등록, 신형 GV80 하이브리드 사양 공개에 대한 반응)' },
         { community: '뽐뿌 자동차게시판', title: '2000km 주행 후기 K8 평가', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=974738', stat: '조회 1,482 · 추천 6 (오늘 10:09 등록, K8 2,000km 주행 후 장단점 정리)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-13',
@@ -1519,7 +1470,6 @@
         { community: '보배드림 자유게시판', title: '우선 싸다고 팔린 중국전기차-유럽에서 장난아님', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3428548', stat: '조회 330 · 댓글 1 (오늘 08:14 등록, 유럽 시장 중국 전기차 판매 확대 이야기)' },
         { community: '보배드림 국산차게시판', title: '2028 GV80 하이브리드 공식 0~100km/h', url: 'https://www.bobaedream.co.kr/view?code=national&No=2413553', stat: '조회 63 (오늘 09:18 등록, 신형 GV80 하이브리드 가속 성능 공유)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-12',
@@ -1542,7 +1492,6 @@
         { community: '보배드림 수입차게시판', title: 'X5타다가 ex90기변 어떻게 생각하시나요?', url: 'https://www.bobaedream.co.kr/view?code=import&No=714820', stat: '조회 115 · 댓글 4 (오늘 16:01 등록, 대형 수입 SUV에서 전기 SUV로 갈아타기 상담)' },
         { community: '보배드림 국산차게시판', title: '티볼리 19년식 중고차 구매했는데 질문드립니다', url: 'https://www.bobaedream.co.kr/view?code=national&No=2413509', stat: '조회 89 · 댓글 3 (오늘 16:48 등록, 중고차 구매 후 차량 상태 점검 문의)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-12',
@@ -1566,7 +1515,6 @@
         { community: '보배드림 국산차게시판', title: '아반떼 가격이 불만이라면...', url: 'https://www.bobaedream.co.kr/view?code=national&No=2413476', stat: '조회 282 · 댓글 15 (오늘 12:05 등록, 신형 아반떼 가격 인상 논쟁)' },
         { community: '보배드림 수입차게시판', title: '벤츠 AMG시트 로고에 화상입어 차주들 70억 집단소송', url: 'https://www.bobaedream.co.kr/view?code=import&No=714814', stat: '조회 83 · 댓글 3 (오늘 13:09 등록, 미국에서 제기된 AMG 시트 로고 화상 집단소송 공유)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-12',
@@ -1590,7 +1538,6 @@
         { community: '클리앙 굴러간당', title: 'ix3 vs GLC EV 고민입니다. 아직 때가 아닌것 같기도...', url: 'https://www.clien.net/service/board/cm_car/19245605', stat: '조회 515 · 댓글 12 (오늘 08:14 등록, 신형 수입 전기 SUV 구매 시점 고민 상담)' },
         { community: '뽐뿌 자동차게시판', title: '말도3세대 구매 중고 구매 경험 공유', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=974631', stat: '조회 13,628 · 추천 6 (오늘 01:32 등록, 마쓰다3 중고 구매 과정 경험 공유)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-11',
@@ -1613,9 +1560,6 @@
         { community: '클리앙 굴러간당', title: '이야기) 엔페라 슈프림 어떻게 생각하세요?', url: 'https://www.clien.net/service/board/cm_car/19245248', stat: '조회 784 · 댓글 15 (오늘 14:12 등록, 국산 타이어 제품 평가 논의)' },
         { community: '보배드림 수입차게시판', title: '테슬라 인도 탁송 중 과실로 인한 파손 사고', url: 'https://www.bobaedream.co.kr/view?code=import&No=714808', stat: '조회 120 (오늘 16:15 등록, 신차 인도 탁송 과정에서 발생한 차량 손상 사례)' },
         { community: '보배드림 국산차게시판', title: 'Cn8 lpi 출시 안한다하네요...', url: 'https://www.bobaedream.co.kr/view?code=national&No=2413406', stat: '조회 24 (오늘 18:03 등록, 신형 아반떼 LPG 트림 미출시 이야기)' },
-      ],
-      heydealer: [
-        { title: '헤이딜러에 모닝 가스차 올라옴', url: 'https://gall.dcinside.com/mgallery/board/view/?id=used_car&no=151702', note: '디시인사이드 중고차갤러리, 중립 (2026.08.11 16:58 등록, 조회 70). 헤이딜러에 올라온 기아 모닝 LPG 매물 화면을 공유한 단순 매물 언급 글입니다.' },
       ],
     },
     {
@@ -1640,7 +1584,6 @@
         { community: '클리앙 굴러간당', title: '기아차 1:1 문의 무쓸모 답변', url: 'https://www.clien.net/service/board/cm_car/19245193', stat: '조회 611 · 댓글 7 (오늘 12:36 등록, 제조사 고객문의 응대 품질 불만)' },
         { community: '보배드림 국산차게시판', title: '전기차 구매시 고려사항 정리', url: 'https://www.bobaedream.co.kr/view?code=national&No=2413353', stat: '조회 262 · 댓글 15 (오늘 11:01 등록, 전기차 구매 전 점검 항목 정리글)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-11',
@@ -1664,7 +1607,6 @@
         { community: '보배드림 자유게시판', title: 'GLE 450 vs X5 vs 카이엔 고민입니다', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3427954', stat: '조회 109 · 댓글 2 (오늘 09:06 등록, 대형 수입 SUV 3종 구매 비교 상담)' },
         { community: '보배드림 자동차뉴스/토론', title: '"이러면 G80을 누가 사"... 실연비 17.2km/L, 디자인·편의성 모두 완벽한 \'하이브리드 세단\'', url: 'https://www.bobaedream.co.kr/view?code=cnews&No=3263', stat: '조회 72 (오늘 03:04 등록, 렉서스 ES 300h가 1~7월 수입 하이브리드 판매 1위 3,752대)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-10',
@@ -1687,7 +1629,6 @@
         { community: '보배드림 수입차게시판', title: '현시점 640d 어떤가요??', url: 'https://www.bobaedream.co.kr/view?code=import&No=714806', stat: '조회 1,672 · 댓글 10 (오늘 16:55 등록, 중고 수입차 구매 적정성 상담)' },
         { community: '보배드림 국산차게시판', title: 'CN7 인스 재고(2825만) vs CN8 가성비(2800만), 3~5년 타면 뭐가 맞을까요?', url: 'https://www.bobaedream.co.kr/view?code=national&No=2413272', stat: '조회 194 · 댓글 4 (오늘 16:47 등록, 구형 재고차와 신형 가성비 트림 비교)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-10',
@@ -1711,7 +1652,6 @@
         { community: '클리앙 굴러간당', title: '한국에 꼭 나왔으면 하는 차량 컨셉', url: 'https://www.clien.net/service/board/cm_car/19244452', stat: '조회 1,908 · 댓글 12 (오늘 09:45 등록, 국내 미출시 차종 수요 논의)' },
         { community: '디시인사이드 중고차갤러리', title: '케이카 보증수리 제가 진상인가요?', url: 'https://gall.dcinside.com/mgallery/board/view/?id=used_car&no=151050', stat: '조회 186 (오늘 12:33 등록, 케이카 구매 후 보증수리 처리 불만)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-10',
@@ -1735,9 +1675,6 @@
         { community: '클리앙 굴러간당', title: '펀카로 미니 고민 중에 있습니다. 컨버터블 vs JCW', url: 'https://www.clien.net/service/board/cm_car/19244267', stat: '조회 1,373 · 댓글 19 (어제 21:00 등록, 미니 중고 트림 선택 논의)' },
         { community: '클리앙 굴러간당', title: 'BYD의 초소형차, 일본에서 큰 임무를 맡다', url: 'https://www.clien.net/service/board/cm_car/19244394', stat: '조회 780 · 댓글 10 (오늘 08:27 등록, BYD 경차급 전기차의 일본 진출 논의)' },
       ],
-      heydealer: [
-        { title: '당근 엔카 케이카 헤이딜러 제조사인증증고', url: 'https://gall.dcinside.com/mgallery/board/view/?id=used_car&no=150950', note: '당근·엔카·케이카·헤이딜러·제조사 인증중고차를 묶어 \'중고차는 어떤 인증도 상태를 다 보증할 수 없다\'고 주장하는 글입니다. 헤이딜러 개별 사고가 아니라 인증중고차 신뢰도 자체를 겨냥한 부정적 언급입니다 (디시인사이드 중고차 마이너갤러리, 2026.08.10 01:39, 조회 225)' },
-      ],
     },
     {
       date: '2026-08-09',
@@ -1757,9 +1694,6 @@
         { community: '클리앙 굴러간당', title: 'K8 하이브리드 3주 2000km 후기', url: 'https://www.clien.net/service/board/cm_car/19244246', stat: '조회 787 · 댓글 1 (오늘 19:51 등록, 신차 실사용 연비·완성도 후기)' },
         { community: '보배드림 자유게시판', title: '[경고] 쏘카 대여 20분 만에 주행 중 시동 꺼짐... 고속도로 올렸으면', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3427624', stat: '조회 130 (오늘 21:39 등록, 카셰어링 차량 정비 상태 문제 제기)' },
         { community: '뽐뿌 자동차게시판', title: 'BYD 드래곤 구매 성능비교', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=974445', stat: '조회 1,339 · 추천 1 (오늘 20:47 등록, 중국산 전기차 구매 검토 논의)' },
-      ],
-      heydealer: [
-        { title: '오늘 헤딜로 차량 탁송받고 끌고다녀봤는데,', url: 'https://gall.dcinside.com/mgallery/board/view/?id=used_car&no=150858', note: '헤이딜러로 코나 2023년식(약 6만km, 2,700만원대 풀옵션)을 사서 탁송받은 구매자가, 옵션이 생각만큼 필요 없다고 느껴 환불 후 신차 구매를 고민 중이라는 글입니다. 서비스 불만보다는 구매 후회에 가깝지만 환불 검토가 언급된 부정적 신호입니다 (디시인사이드 중고차 마이너갤러리, 2026.08.09 21:45)' },
       ],
     },
     {
@@ -1783,7 +1717,6 @@
         { community: '보배드림 국산차게시판', title: '차가 고장났는데 카센터에서 원인을 모르겠대요ㅠㅠ', url: 'https://www.bobaedream.co.kr/view?code=national&No=2413151', stat: '조회 142 · 댓글 4 (오늘 13:15 등록, 원인 불명 고장 상담)' },
         { community: '보배드림 국산차게시판', title: '국내 전체 전기차 시장 내년 중국생산 비율 40% 육박', url: 'https://www.bobaedream.co.kr/view?code=national&No=2413157', stat: '조회 90 (오늘 14:01 등록, 중국산 전기차 비중 확대 전망 공유)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-07',
@@ -1806,10 +1739,6 @@
         { community: '클리앙 굴러간당', title: '테슬라 FSD 구독제가 늦춰졌네요.', url: 'https://www.clien.net/service/board/cm_car/19243118', stat: '조회 1,171 · 댓글 4 (오늘 15:07 등록, FSD 구독 전환 연기 소식)' },
         { community: '보배드림 자유게시판', title: '중고차 구매, 이거 어떻게하면 좋을까요?', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3427065', stat: '조회 45 · 댓글 2 (오늘 18:00 등록, 중고차 구매 과정 상담 요청)' },
         { community: '뽐뿌 자동차게시판', title: '프리미엄 중고차 테슬라 모델체인지 대기중~', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&page=1&divpage=182&no=974309', stat: '조회 7,783 · 추천 36 (오늘 16:16 등록, 모델 변경 앞둔 테슬라 중고 시세 대기 심리)' },
-      ],
-      heydealer: [
-        { title: '헤이딜러로 차 예약금까지 넣었는데 왜 연락이 안오지', url: 'https://gall.dcinside.com/mgallery/board/view/?id=used_car&no=149665', note: '인증중고차 예약금을 넣고 연락을 기다리는데 회신이 없다는 구매자 글입니다. 강한 불만 표현은 아니지만 예약 이후 안내가 늦는다는 신호로, 응대 속도 점검이 필요해 보입니다 (디시인사이드 중고차 마이너갤러리, 2026.08.07 17:51)' },
-        { title: '헤이딜러에 프라이드 mpi 올라옴', url: 'https://gall.dcinside.com/mgallery/board/view/?id=used_car&no=149660', note: '헤이딜러에 올라온 구형 프라이드 매물을 공유하는 글입니다. 부정적 내용은 없고, 매물 자체가 화제가 된 중립적 언급입니다 (디시인사이드 중고차 마이너갤러리, 2026.08.07 17:40)' },
       ],
     },
     {
@@ -1834,9 +1763,6 @@
         { community: '보배드림 자동차뉴스/토론', title: '현대차·기아, 기존 공장에서 못 만드는 부품을 3D 프린팅으로 찍어낸다', url: 'https://www.bobaedream.co.kr/view?code=cnews&No=3236', stat: '조회 2,143 · 댓글 1 (오늘 09:35 등록, 단종 부품 공급 가능성 논의)' },
         { community: '보배드림 국산차게시판', title: '아반떼랑 구형 쏘나타 실내 급차이', url: 'https://www.bobaedream.co.kr/view?code=national&No=2412933', stat: '조회 503 · 댓글 1 (오늘 10:19 등록, 신형 아반떼 실내 체감 비교)' },
       ],
-      heydealer: [
-        { title: '헤이딜러 할부구매 질문', url: 'https://gall.dcinside.com/mgallery/board/view/?id=used_car&no=149502', note: '선입금 500만원 후 48개월 할부 시 헤이딜러 자체 캐피탈만 되는지, 금융사를 직접 고를 수 있는지 묻는 구매자 질문입니다. 불만이 아닌 중립적 문의지만 할부 금융 안내가 부족하다는 신호로 볼 수 있습니다 (디시인사이드 중고차 마이너갤러리, 2026.08.07 12:25)' },
-      ],
     },
     {
       date: '2026-08-07',
@@ -1859,7 +1785,6 @@
         { community: '보배드림 자유게시판', title: '플랫폼 믿고 산 중고차 엔진룸 전체에서 곰팡이 발견, 환불 후 동일 차량이 다시 판매되고 있습니다', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3426931', stat: '조회 27 · 댓글 1 (오늘 09:31 등록, 중고차 플랫폼 하자 미고지·재판매 문제 제기)' },
         { community: '보배드림 국산차게시판', title: '베뉴 후속없이 2030년 단종 예정', url: 'https://www.bobaedream.co.kr/view?code=national&No=2412927', stat: '조회 62 (오늘 09:09 등록, 엔트리 SUV 단종과 캐스퍼 대체 전망)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-06',
@@ -1883,14 +1808,13 @@
         { community: '보배드림 국산차게시판', title: '근데 아반떼 누우엔진 뜬금없다', url: 'https://www.bobaedream.co.kr/view?code=national&No=2412854', stat: '조회 148 · 댓글 7 (오늘 16:41 등록, 신형 아반떼 엔진 구성 논쟁)' },
         { community: '보배드림 자유게시판', title: '렌트카 셀토스 차량 수리비 질문', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3426762', stat: '조회 255 · 댓글 3 (오늘 16:56 등록, 렌터카 사고 수리비 산정 문의)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-06',
       edition: 'midday',
       rangeLabel: '오늘 09:30 ~ 13:30',
       generatedAt: '13:45',
-      headline: '8세대 아반떼가 계약 첫날 1만대를 넘기며 준중형 시장의 기준선을 다시 그었고, 커뮤니티도 온종일 아반떼·중국차 이야기로 채워졌습니다. 동시에 보배드림에 \'헤이딜러 경매로 산 차가 무사고 표기와 달랐다\'는 딜러 분쟁 글이 올라와 확인이 필요합니다.',
+      headline: '8세대 아반떼가 계약 첫날 1만대를 넘기며 준중형 시장의 기준선을 다시 그었고, 커뮤니티도 온종일 아반떼·중국차 이야기로 채워졌습니다.',
       carNews: [
         { title: '현대차 \'디 올 뉴 아반떼\', 계약 첫날 1만 대 돌파', url: 'https://www.hyundaimotorgroup.com/ko/news/hyundai-motor-company-the-all-new-avante-first-day-orders', note: '8세대 아반떼가 사전계약 없이 계약 첫날에만 1만대를 넘겼습니다. 2.0 가솔린 2,398만원·1.6 하이브리드 3,042만원 구성이며, 신차 수요가 몰리는 만큼 기존 아반떼 중고 물량 유입도 늘어날 수 있습니다.' },
         { title: '신차 쏟아내는 수입차, 최대 실적 찍나', url: 'https://v.daum.net/v/20260806110356130', note: '수입차 상반기 판매가 18만6천대로 역대 최대를 기록했고, 하반기에도 전기차·플래그십 세단·PHEV 신차가 이어집니다. 연간 최다 판매 경신 가능성이 커, 수입 중고 물량 구성도 함께 바뀔 전망입니다.' },
@@ -1906,9 +1830,6 @@
         { community: '클리앙 굴러간당', title: '투싼 풀체인지는 풀옵 5500이야기가 있네요.', url: 'https://www.clien.net/service/board/cm_car/19242335', stat: '조회 1,075 · 댓글 16 (오늘 11:41 등록)' },
         { community: '보배드림 국산차게시판', title: '옵션 넣고 CN8 견적 넣어 봤습니다', url: 'https://www.bobaedream.co.kr/view?code=national&No=2412804', stat: '조회 261 · 댓글 5 (오늘 12:20 등록, 신형 아반떼 실구매가 체감)' },
         { community: '보배드림 자유게시판', title: '사회초년생 중고차로 이거 괜찮을까요?', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3426701', stat: '조회 130 · 댓글 7 (오늘 13:18 등록, 첫차 중고 구매 상담)' },
-      ],
-      heydealer: [
-        { title: '헤X딜러에서 피해 보신분 더 계신가요?', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3426695', note: '경남 마산 딜러가 헤이딜러 경매로 낙찰받은 스타렉스(580만원)가 무사고 표기와 달리 골격 교환 이력이 있었다는 주장입니다. 진단 오진 보상이 규정상 40만원에 그쳤고, 반납 시 정비·도색비 약 100만원을 딜러가 부담하라는 안내와 이용 정지 언급이 있었다는 내용으로 부정·분쟁성 글입니다 (보배드림 자유게시판, 2026.08.06, 조회 265·댓글 9)' },
       ],
     },
     {
@@ -1933,7 +1854,6 @@
         { community: '보배드림 국산차게시판', title: '차 15년 유지시 기름값은 얼마나 들까...', url: 'https://www.bobaedream.co.kr/view?code=national&No=2412770', stat: '조회 173 · 댓글 11 (오늘 07:56 등록, 장기 보유 유지비 계산)' },
         { community: '뽐뿌 자동차게시판', title: '"현대 K8 풀체인지" 공식', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=974185', stat: '조회 540 · 추천 7 (오늘 09:08 등록)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-05',
@@ -1956,9 +1876,6 @@
         { community: '클리앙 굴러간당', title: '모델y 주니퍼 rwd 구매고민입니다.', url: 'https://www.clien.net/service/board/cm_car/19241843', stat: '조회 618 · 댓글 8 (오늘 16:32 등록)' },
         { community: '보배드림 자유게시판', title: '슬슬 본전 나오는 대륙 전기차의 내구성', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3426503', stat: '조회 280 · 댓글 6 (오늘 17:10 등록, 중국산 전기차 내구성 논쟁)' },
         { community: '보배드림 국산차게시판', title: '신형 아반떼 CN8 가격 책정을 보며 드는 의문', url: 'https://www.bobaedream.co.kr/view?code=national&No=2412705', stat: '조회 54 · 댓글 3 (오늘 17:52 등록)' },
-      ],
-      heydealer: [
-        { title: '헤이딜러 폐차 후기', url: 'https://www.clien.net/service/board/cm_car/19241821', note: '2014년식 폭스바겐 CC(23만km)를 17개 업체 견적으로 폐차한 후기로, 헤이딜러 견적(120~170만원)이 타 플랫폼·지역 폐차장보다 높았고 당일 말소·입금이 됐다는 긍정 평가 (클리앙 굴러간당, 2026.08.05)' },
       ],
     },
     {
@@ -1983,7 +1900,6 @@
         { community: '보배드림 국산차게시판', title: '아반떼 풀옵 3800이 얼마나 미친 가격이냐면', url: 'https://www.bobaedream.co.kr/view?code=national&No=2412654', stat: '조회 134 · 댓글 3 (오늘 13:14 등록)' },
         { community: '보배드림 국산차게시판', title: '중고차 비교 아르카나 하브 vs 니로(19년식~)', url: 'https://www.bobaedream.co.kr/view?code=national&No=2412649', stat: '조회 34 · 댓글 5 (오늘 13:02 등록, 중고 하이브리드 비교 상담)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-05',
@@ -2007,7 +1923,6 @@
         { community: '보배드림 자동차뉴스/토론', title: '현대차·기아, 3열 SUV 왕좌 포드·GM에서 빼앗아 올까', url: 'https://www.bobaedream.co.kr/view?code=cnews&No=3210', stat: '오늘 09:35 등록 (조회 집계 초기)' },
         { community: '뽐뿌 자동차게시판', title: '최근 BYD 중국수입차 언제쯤이나 출시되나요...', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=974059', stat: '조회 546 · 추천 13 (오늘 08:11 등록)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-04',
@@ -2031,7 +1946,6 @@
         { community: '보배드림 국산차게시판', title: '신차 엔진오일 교환 언제해야하나요?', url: 'https://www.bobaedream.co.kr/view?code=national&No=2412463', stat: '조회 125 · 댓글 5 (오늘 08:30 등록)' },
         { community: '뽐뿌 자동차게시판', title: '7월 하이브리드 신차 판매 현황 공개', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973983', stat: '조회 691 · 추천 4 (오늘 08:58 등록)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-03',
@@ -2055,7 +1969,6 @@
         { community: '보배드림 국산차게시판', title: 'BYD 라코 2190만원에 국내 출시.', url: 'https://www.bobaedream.co.kr/view?code=national&No=2412395', stat: '조회 66 (오늘 17:52 등록, 중국 전기차 저가 공세 반응)' },
         { community: '뽐뿌 자동차게시판', title: '중고차 구매, KGM 스포츠 구매 시 한 가지 권장사항', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973949', stat: '조회 402 · 추천 1 (오늘 17:13 등록, 중고차 구매 시 확인 사항)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-03',
@@ -2078,7 +1991,6 @@
         { community: '보배드림 자유게시판', title: '안녕하세요. 중고차 구입하다 답답한 일이 생겨서 왔습니다.', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3425850', stat: '조회 149 · 댓글 7 (오늘 12:37 등록, 중고차 구매 과정 불만 상담)' },
         { community: '뽐뿌 자동차게시판', title: '렉서스 중고가 상승중.jpg', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973929', stat: '조회 206 · 추천 1 (오늘 13:17 등록, 중고 시세 상승 관련)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-08-03',
@@ -2102,10 +2014,6 @@
         { community: '보배드림 자유게시판', title: '혹시 중고차 수출 대표님 계실까요..?^^', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3425781', stat: '조회 255 (중고차 수출 업계 문의글)' },
         { community: '보배드림 국산차게시판', title: '본넷 도장 불량 질문', url: 'https://www.bobaedream.co.kr/view?code=national&No=2412314', stat: '조회 211 · 댓글 1 (신차 도장 상태 판정 문의)' },
       ],
-      heydealer: [
-        { title: '"무사고가 유사고로 바뀌면 보상"…헤이딜러, 딜러 보호 확대', url: 'https://www.newspim.com/news/view/20260727000923', note: '언론 기사(뉴스핌, 2026.07.27). 진단 오류로 무사고가 유사고로 바뀌면 차량가의 최대 5%를 추가 보상하는 제도를 도입했다는 내용으로, 앞서 나온 딜러 분쟁 보도에 대한 대응 성격입니다.' },
-        { title: '헤이딜러, 회원딜러 62.6% "보상 개선 체감" 진단 오류 대응 확대', url: 'https://www.autodaily.co.kr/news/articleView.html?idxno=546164', note: '언론 기사(엠투데이, 2026.07.27). 6월 시행한 \'제로 안심매입 정책\'에 대해 설문 참여 딜러 2,237명 중 62.6%가 개선을 체감했다고 답했고, 부정 평가는 1.6%였습니다.' },
-      ],
     },
     {
       date: '2026-08-02',
@@ -2127,9 +2035,6 @@
         { community: '클리앙 굴러간당', title: '닛산 엘그란드가 알파드 보다는 매끈하게 생겼네요', url: 'https://www.clien.net/service/board/cm_car/19239896', stat: '조회 582 · 댓글 2' },
         { community: '클리앙 굴러간당', title: 'G80 시트까짐 이 정도도 보증 가능할까요?', url: 'https://www.clien.net/service/board/cm_car/19239911', stat: '조회 473 · 댓글 11 (신차 보증 범위 문의)' },
         { community: '보배드림 자유게시판', title: '아파트에서 겹주차 해놨는데 상대방이 내차를 밀다가 앞차랑 충돌이..', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3425661', stat: '조회 190 · 댓글 1 (겹주차 밀다 발생한 접촉사고 책임 문의)' },
-      ],
-      heydealer: [
-        { title: '[AI시대 일할 권리, 플랫폼 접근권 ①] 중고차 딜러 항의하니 앱 접근 차단한 \'헤이딜러\'', url: 'https://v.daum.net/v/20260623063213090', note: '언론 기사(매일노동뉴스, 2026.06.23). 사고차가 무사고로 판매된 건에 항의한 딜러의 앱 접근이 차단됐다는 부정 보도로, 딜러 측은 소송·집단행동을 예고했습니다. 최근 2주 내 새 언급이 없어 아직 브리핑에 실린 적 없는 건을 올립니다.' },
       ],
     },
     {
@@ -2153,7 +2058,6 @@
         { community: '보배드림 국산차게시판', title: '더뉴그랜저 하브 타봤습니다.', url: 'https://www.bobaedream.co.kr/view?code=national&No=2412081', stat: '조회 359 · 댓글 5' },
         { community: '보배드림 자유게시판', title: '쏘카 사고 접수를 위한 블랙박스가 소실됐다고 받을 수 없다고 합니다', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3425225', stat: '조회 246 · 댓글 9 (카셰어링 사고 처리 분쟁)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-31',
@@ -2177,7 +2081,6 @@
         { community: '보배드림 자동차뉴스/토론', title: '논란의 페라리 루체 EV, 두 달 만에 연간 판매 목표 달성', url: 'https://www.bobaedream.co.kr/view?code=cnews&No=3169', stat: '조회 1,839 · 댓글 5' },
         { community: '보배드림 자유게시판', title: '사고차량 판매', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3425158', stat: '조회 248 · 댓글 3 (사고 이력 차량 처분 방법 문의)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-31',
@@ -2200,9 +2103,6 @@
         { community: '보배드림 자유게시판', title: '과실비율 얼마나 나올까요?', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3425079', stat: '조회 234 · 댓글 6' },
         { community: '보배드림 자동차뉴스/토론', title: '테슬라, 누적 생산 1,000만 대 돌파', url: 'https://www.bobaedream.co.kr/view?code=cnews&No=3170', stat: '오늘 09:26 등록 (조회 집계 초기)' },
         { community: '뽐뿌 자동차게시판', title: '"벤츠 W213, 저 가격대라면 충동구매 980만원.. 후회는 없을까요"', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973739', stat: '조회 375 · 추천 9 (중고 수입차 구매 고민)' },
-      ],
-      heydealer: [
-        { title: '코스피 노리는 헤이딜러, 구주 200억 손바뀐 이유', url: 'https://www.newstopkorea.com/news/articleView.html?idxno=43064', note: '언론 기사(뉴스톱, 2026.07월 말). 초기 투자 VC 두 곳이 200억원 규모 구주를 매각했고, 피알앤디컴퍼니가 내년 하반기 코스피 상장을 준비 중이라는 내용입니다.' },
       ],
     },
     {
@@ -2227,7 +2127,6 @@
         { community: '클리앙 굴러간당', title: '후기 타이어 바꿨더니 확실히 다르네요', url: 'https://www.clien.net/service/board/cm_car/19238234', stat: '조회 1,075 · 댓글 1' },
         { community: '클리앙 굴러간당', title: 'Q/A 썸머타이어 구매 (사계절 아님)', url: 'https://www.clien.net/service/board/cm_car/19238301', stat: '조회 478 · 댓글 21' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-30',
@@ -2250,9 +2149,6 @@
         { community: '클리앙 굴러간당', title: '파워큐브 첫 사용해봤습니다.', url: 'https://www.clien.net/service/board/cm_car/19237884', stat: '조회 1,149 · 댓글 19' },
         { community: '클리앙 굴러간당', title: '회원님들 처음 차는 뭐 였어요??', url: 'https://www.clien.net/service/board/cm_car/19238013', stat: '조회 779 · 댓글 47' },
         { community: '뽐뿌 자동차게시판', title: '10:0 이겼는데 보험에 9:1로 처리 되면 이의 제기 가능한가요?', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973688', stat: '조회 203 · 추천 6 (과실비율 분쟁 문의)' },
-      ],
-      heydealer: [
-        { title: '"무사고가 유사고로 바뀌면 보상"…헤이딜러, 딜러 보호 확대', url: 'https://www.newspim.com/news/view/20260727000923', note: '언론 기사(뉴스핌, 2026.07.27). 진단 오류로 사고 이력이 바뀌면 차량가 최대 5%를 추가 보상하는 제도 도입, 회원딜러 2,237명 중 62.6%가 개선을 체감했다는 긍정 보도입니다.' },
       ],
     },
     {
@@ -2277,7 +2173,6 @@
         { community: '보배드림 자유게시판', title: '매번 눈팅만 하다 차량구매 고민이 있어서 고견 부탁드립니다!', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3424798', stat: '조회 170 · 댓글 4 (차량 구매 조언 요청)' },
         { community: '뽐뿌 자동차게시판', title: '중고차 수소차 애매한데 통째로 갈아야 하나요?', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973674', stat: '조회 90 · 추천 5 (중고 수소차 처분 고민)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-29',
@@ -2301,7 +2196,6 @@
         { community: '보배드림 자유게시판', title: '렌트차량 사고 도와주세요.', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3424630', stat: '조회 283 · 댓글 15' },
         { community: '보배드림 자유게시판', title: '토탈셀러 사기', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3424629', stat: '조회 91 · 댓글 1 (중고차 판매 대행 관련 피해 주장)' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-29',
@@ -2325,7 +2219,6 @@
         { community: '보배드림 국산차게시판', title: '쏘렌토 신차 출고 당일 고속도로 시동 꺼짐...', url: 'https://www.bobaedream.co.kr/view?code=national&No=2411830', stat: '조회 308 · 댓글 7' },
         { community: '뽐뿌 자동차게시판', title: '\'전기차 판매 선두 BYD\' 관련 기사', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973620', stat: '조회 10,814 · 추천 8' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-29',
@@ -2348,7 +2241,6 @@
         { community: '클리앙 굴러간당', title: '넥센 타이어 렌탈 괜찮나요?', url: 'https://www.clien.net/service/board/cm_car/19236584', stat: '조회 1,148 · 댓글 14' },
         { community: '뽐뿌 자동차게시판', title: '고속도로주행중 오일경고.mp4', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973605', stat: '조회 14,655 · 댓글 53' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-28',
@@ -2372,14 +2264,13 @@
         { community: '클리앙 굴러간당', title: '테슬라 모델Y 주니퍼로 입당합니다.', url: 'https://www.clien.net/service/board/cm_car/19236308', stat: '조회 1,352 · 댓글 8' },
         { community: '클리앙 굴러간당', title: '넥쏘로 입당합니다.', url: 'https://www.clien.net/service/board/cm_car/19236335', stat: '조회 1,225 · 댓글 13' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-28',
       edition: 'midday',
       rangeLabel: '오늘 09:30 ~ 13:30',
       generatedAt: '13:50',
-      headline: '기아가 브라질 첫 공장 설립을 추진하며 1조7천억원대 세금 분쟁 해소에 나섰고, 현대모비스도 브라질 i20 순정용품 30종을 투입하는 등 남미 공략이 본격화됐습니다. 헤이딜러는 진단 오류로 무사고가 유사고로 바뀔 경우 차량가 최대 5%를 보상하는 딜러 보호 정책을 확대했습니다.',
+      headline: '기아가 브라질 첫 공장 설립을 추진하며 1조7천억원대 세금 분쟁 해소에 나섰고, 현대모비스도 브라질 i20 순정용품 30종을 투입하는 등 남미 공략이 본격화됐습니다.',
       carNews: [
         { title: '기아, 브라질 첫 공장 추진…\'1.7조 분쟁\' 마침표 찍나', url: 'https://v.daum.net/v/20260728112457165', note: '기아가 브라질 현지 첫 생산공장 설립을 검토 중입니다. 현지 진출이 오래 끌어온 1조7천억원 규모 세금 분쟁을 푸는 카드가 될 수 있다는 관측입니다.' },
         { title: '현대모비스, 브라질 신형 i20에 순정용품 30종 \'풀세팅\'…현지 수요 적극 반영', url: 'https://v.daum.net/v/20260728101202139', note: '브라질에서 출시되는 신형 i20에 순정용품 30종을 한꺼번에 투입해 현지 소비자 취향에 맞춘 애프터마켓 매출 확대를 노립니다.' },
@@ -2394,9 +2285,6 @@
         { community: '보배드림 수입차게시판', title: '인생첫차 수리점검 어디서해야할까요', url: 'https://www.bobaedream.co.kr/view?code=import&No=714731', stat: '조회 1,451 · 댓글 9' },
         { community: '보배드림 국산차게시판', title: '제네시스 GV90 실내 스파이샷', url: 'https://www.bobaedream.co.kr/view?code=national&No=2411751', stat: '조회 329 · 댓글 1' },
         { community: '뽐뿌 자동차게시판', title: 'BYD 후기', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973561', stat: '조회 26,173 · 댓글 20' },
-      ],
-      heydealer: [
-        { title: '"무사고가 유사고로 바뀌면 보상"…헤이딜러, 딜러 보호 확대', url: 'https://www.newspim.com/news/view/20260727000923', note: '진단 오류로 사고구분이 바뀌면 차량가 최대 5%를 추가 보상하는 제도를 시행. 회원 딜러 2,237명 중 62.6%가 개선을 체감했다고 응답 (뉴스핌 기사, 2026.07.27 · 긍정).' },
       ],
     },
     {
@@ -2420,9 +2308,6 @@
         { community: '클리앙 굴러간당', title: '현대차가 살아남기 위한 최소조건은 L2++ 자율주행입니다', url: 'https://www.clien.net/service/board/cm_car/19235820', stat: '조회 2,376 · 댓글 18' },
         { community: '클리앙 굴러간당', title: '티맵에 새로운 기능이 추가 되었다는군요', url: 'https://www.clien.net/service/board/cm_car/19235823', stat: '조회 3,466 · 댓글 19' },
       ],
-      heydealer: [
-        { title: '헤이딜러 앵벌이', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3423011', note: '차를 헤이딜러에 올려 판 뒤 최고가를 부른 매입상인이 현장에서 휠 스크래치·도색 이력을 빌미로 감가를 시도했다는 판매자 경험담. 화제글이 됨 (보배드림 자유게시판, 2026.07.24 · 조회 14,091·추천 427).' },
-      ],
     },
     {
       date: '2026-07-27',
@@ -2443,7 +2328,6 @@
         { community: '보배드림 수입차게시판', title: 'BMW 엔진 교체 관련 조언 부탁드립니다', url: 'https://www.bobaedream.co.kr/view?code=import&No=714729', stat: '조회 1,038 · 댓글 10' },
         { community: '보배드림 수입차게시판', title: '도이치모터스 탁송사고 후 "고객님 알아서 하세요"', url: 'https://www.bobaedream.co.kr/view?code=import&No=714728', stat: '조회 296 · 댓글 4' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-27',
@@ -2466,7 +2350,6 @@
         { community: '클리앙 굴러간당', title: '어지간하면 전기차는 800V로 구입하세요', url: 'https://www.clien.net/service/board/cm_car/19235506', stat: '조회 1,943 · 댓글 29' },
         { community: '클리앙 굴러간당', title: '테슬라 오너분들께 여쭤봅니다', url: 'https://www.clien.net/service/board/cm_car/19235507', stat: '조회 1,287 · 댓글 30' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-27',
@@ -2483,7 +2366,6 @@
         { community: '보배드림 자유게시판', title: '1일 보험 및 연남동 부근 현대차수리센터 찾습니다', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3423756', stat: '조회 200 · 댓글 3' },
         { community: '디시인사이드 자동차갤러리', title: '에어컨을 쎄게 틀면 불이나는 차가 있다?', url: 'https://gall.dcinside.com/board/view/?id=car_new1&no=11457202', stat: '조회 111' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-27',
@@ -2505,7 +2387,6 @@
         { community: '뽐뿌 자동차게시판', title: '신차 구매 예정 생각', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973503', stat: '조회 1,510' },
         { community: '디시인사이드 자동차갤러리', title: '아우디 서비스센터왔다', url: 'https://gall.dcinside.com/board/view/?id=car_new1&no=11457236', stat: '조회 43' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-24',
@@ -2528,7 +2409,6 @@
         { community: '보배드림 자유게시판', title: '중고리스 상담받고 황당한 경험...', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3423132', stat: '조회 298 · 댓글 5' },
         { community: '뽐뿌 자동차게시판', title: 'BYD 배터리 공개..JPG', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973355', stat: '조회 15,205' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-24',
@@ -2550,7 +2430,6 @@
         { community: '보배드림 자유게시판', title: '이거 벽에긁힌걸까요 다른 차가 긁은걸까요', url: 'https://www.bobaedream.co.kr/view?code=freeb&No=3423056&bm=1', stat: '조회 210' },
         { community: '뽐뿌 자동차게시판', title: 'BYD 정품부품이 뭐라고 물어보니 중국산 중국산', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973334', stat: '조회 9,643' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-24',
@@ -2571,7 +2450,6 @@
         { community: '클리앙 굴러간당', title: '각 자동차 브랜드의 전세계 장악비율', url: 'https://www.clien.net/service/board/cm_car/19233869', stat: '조회 59 · 댓글 1' },
         { community: '뽐뿌 자동차게시판', title: 'DB 자동차의 중국산 전기차 구매에 대한 의문', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973338', stat: '조회 313' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-23',
@@ -2593,7 +2471,6 @@
         { community: '클리앙 굴러간당', title: '팰리세이드(LX3) 차로유지보조 업데이트(26.07.20) 후기', url: 'https://www.clien.net/service/board/cm_car/19233472', stat: '조회 867 · 댓글 7' },
         { community: '뽐뿌 자동차게시판', title: "테슬라 자율주행, FSD 충돌 '운전자 개입' 등 총 207건 보고", url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973307', stat: '조회 917' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-23',
@@ -2615,7 +2492,6 @@
         { community: '클리앙 굴러간당', title: '모델y 출고했습니다', url: 'https://www.clien.net/service/board/cm_car/19233263', stat: '조회 1,338 · 댓글 9' },
         { community: '뽐뿌 자동차게시판', title: '테슬라 FSD 가격 인상 로드맵 발표 관련', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973288', stat: '조회 1,423 · 댓글 27' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-23',
@@ -2634,7 +2510,6 @@
         { community: '클리앙 굴러간당', title: '레이 구매 400만원 + 100만원(수리) vs 500만원 짜리?', url: 'https://www.clien.net/service/board/cm_car/19233060', stat: '조회 1,036 · 댓글 12' },
         { community: '뽐뿌 자동차게시판', title: '자동차 보호필름(PPF) 두께 선택 관련 상담', url: 'https://www.ppomppu.co.kr/zboard/view.php?id=car&no=973286', stat: '조회 614' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-22',
@@ -2660,7 +2535,6 @@
         { community: '클리앙 굴러간당', title: 'bmw서비스센타 어이없는후기', url: 'https://www.clien.net/service/board/cm_car/19232545', stat: '조회 1,686 · 댓글 18' },
         { community: '클리앙 굴러간당', title: '엔카에 진단항목에서 베터리 항목도 생겼네요 ㅋㅋㅋ', url: 'https://www.clien.net/service/board/cm_car/19232685', stat: '조회 817 · 댓글 3' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-22',
@@ -2682,7 +2556,6 @@
         { community: '클리앙 굴러간당', title: '카메라에 습기도 차네요', url: 'https://www.clien.net/service/board/cm_car/19232377', stat: '조회 1,572 · 댓글 11' },
         { community: '보배드림 자동차뉴스/토론', title: "[단독] 아반떼, 6년 만에 20대 점유율 반토막…'첫차 시장'", url: 'https://www.bobaedream.co.kr/view?code=cnews&No=3113', stat: '조회 182 · 댓글 2' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-22',
@@ -2706,7 +2579,6 @@
         { community: '보배드림 국산차게시판', title: '시동끄고 난뒤 ..', url: 'https://www.bobaedream.co.kr/view?code=national&No=2411183&bm=1', stat: '조회 92 · 댓글 4' },
         { community: '보배드림 국산차게시판', title: '20년후 국산차 예상가격', url: 'https://www.bobaedream.co.kr/view?code=national&No=2411184&bm=1', stat: '조회 63 · 댓글 2' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-21',
@@ -2729,7 +2601,6 @@
         { community: '보배드림 수입차게시판', title: 'g60 520i 문콕 관련하여 고견 요청드립니다. ㅠㅠ', url: 'https://www.bobaedream.co.kr/view?code=import&No=714691', stat: '조회 287 · 댓글 3' },
         { community: '보배드림 국산차게시판', title: '쌍라이트 켜는 뒷차에 복수할 방법이 생김', url: 'https://www.bobaedream.co.kr/view?code=national&No=2411137&bm=1', stat: '조회 121 · 댓글 4' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-21',
@@ -2753,7 +2624,6 @@
         { community: '클리앙 굴러간당', title: 'KGM, KR10 폐기 후 KE10으로 변경', url: 'https://www.clien.net/service/board/cm_car/19231575', stat: '조회 1,768 · 댓글 14' },
         { community: '디시인사이드 자동차갤러리', title: '돌핀이 수입차 판매 2위', url: 'https://gall.dcinside.com/board/view/?id=car_new1&no=11452408', stat: '조회 33 · 댓글 2' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-21',
@@ -2772,7 +2642,6 @@
         { community: '디시인사이드 자동차갤러리', title: '현대 볼더 진짜 생산하나보네?', url: 'https://gall.dcinside.com/board/view/?id=car_new1&no=11452243', stat: '조회 43 · 댓글 0' },
         { community: '디시인사이드 자동차갤러리', title: '타스만 800만원 할인지원해주네', url: 'https://gall.dcinside.com/board/view/?id=car_new1&no=11452269', stat: '조회 33 · 댓글 7' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-21',
@@ -2792,7 +2661,6 @@
         { community: '클리앙 굴러간당', title: '테슬라 AI팀, FSD Lite 와이드릴리스 후보 언급', url: 'https://www.clien.net/service/board/cm_car/19231478', stat: '조회 1,764 · 댓글 2' },
         { community: '클리앙 굴러간당', title: '운전중에 챗GPT 쓰니까 아주 좋군요', url: 'https://www.clien.net/service/board/cm_car/19231537', stat: '조회 1,059 · 댓글 12' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-20',
@@ -2806,7 +2674,6 @@
         { title: '브리지스톤 후원 오네 슈퍼레이스 프리우스 PHEV 3차전, 송형진 우승', url: 'https://www.motortrend.kr/news/articleView.html?idxno=2709', note: '송형진 선수가 폴 투 윈 우승을 차지하며 시즌 누적 1위 자리를 지켰습니다.' },
       ],
       communityPosts: [],
-      heydealer: [],
     },
     {
       date: '2026-07-20',
@@ -2827,7 +2694,6 @@
         { community: '클리앙 굴러간당', title: 'GV70 들였습니다', url: 'https://www.clien.net/service/board/cm_car/19230911', stat: '조회 2,486 · 댓글 19' },
         { community: '클리앙 굴러간당', title: '우회전 좌깜 어질어질하네요', url: 'https://www.clien.net/service/board/cm_car/19231000', stat: '조회 1,041 · 댓글 21' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-20',
@@ -2846,7 +2712,6 @@
         { community: '보배드림 자동차뉴스/토론', title: 'BMW, ChatGPT를 자동차 판매원으로 활용', url: 'https://www.bobaedream.co.kr/view?code=cnews&No=3094', stat: '조회 460 · 댓글 0' },
         { community: '클리앙 굴러간당', title: '벤쯔 전기차 충전소 사용기(미국)', url: 'https://www.clien.net/service/board/cm_car/19230850', stat: '조회 305 · 댓글 2' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-16',
@@ -2877,7 +2742,6 @@
         { community: '디시인사이드 자동차갤러리', title: '국내서 일본차 = 관종 힙스터', url: 'https://gall.dcinside.com/board/view/?id=car_new1&no=11448631', stat: '조회 68 · 추천 1' },
         { community: '디시인사이드 전기차갤러리', title: 'ID4랑 EV3랑 가격이 비슷한데..ID4어떰??', url: 'https://gall.dcinside.com/mgallery/board/view/?id=electric_car&no=1019', stat: '조회 46 · 추천 1' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-16',
@@ -2900,7 +2764,6 @@
         { community: '클리앙 굴러간당', title: 'K8 하이브리드 수령했습니다', url: 'https://www.clien.net/service/board/cm_car/19228327', stat: '조회 1,812 · 댓글 36' },
         { community: '클리앙 굴러간당', title: '노이어 클라쎄 IX3 인테리어', url: 'https://www.clien.net/service/board/cm_car/19228197', stat: '조회 1,777 · 댓글 14' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-16',
@@ -2926,7 +2789,6 @@
         { community: '디시인사이드 자동차갤러리', title: '눈물나는 BYD 일반인 인식들 ㅋㅋㅋ', url: 'https://gall.dcinside.com/board/view/?id=car_new1&no=11443712', stat: '조회 4,239 · 추천 75 · 댓글 45' },
         { community: '디시인사이드 자동차갤러리', title: '이틀 간격으로 화재가 나는 차량 ㄷㄷㄷㄷㄷㄷㄷ', url: 'https://gall.dcinside.com/board/view/?id=car_new1&no=11445727', stat: '조회 2,837 · 추천 50 · 댓글 34' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-15',
@@ -2947,7 +2809,6 @@
         { community: '보배드림 수입차게시판', title: '알파 로메오 ?', url: 'https://www.bobaedream.co.kr/view?code=import&No=714640', stat: '조회 4,167 · 추천 17 · 댓글 17' },
         { community: '디시인사이드 국산차갤러리', title: '네이버자동차에서 차값에 부가세포함임?', url: 'https://gall.dcinside.com/board/view/?id=k_car&no=95825', stat: '조회 41,699' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-15',
@@ -2973,7 +2834,6 @@
         { community: '디시인사이드 국산차갤러리', title: '배터리 전문가 횽들 봐줘여', url: 'https://gall.dcinside.com/board/view/?id=k_car&no=95937', stat: '조회 8,387 · 추천 15' },
         { community: '디시인사이드 국산차갤러리', title: '차 팔 때 어떻게 팔어', url: 'https://gall.dcinside.com/board/view/?id=k_car&no=95910', stat: '조회 8,076 · 추천 1' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-15',
@@ -3000,7 +2860,6 @@
         { community: '디시인사이드 국산차갤러리', title: '횽님들 중고차시세 질문좀 드릴게요', url: 'https://gall.dcinside.com/board/view/?id=k_car&no=95931', stat: '조회 8,929 · 추천 19' },
         { community: '디시인사이드 전기차갤러리', title: 'Ev6 4년째 타는데 오늘 전손남', url: 'https://gall.dcinside.com/mgallery/board/view/?id=electric_car&no=1015', stat: '조회 261 · 추천 1 · 댓글 4' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-14',
@@ -3027,7 +2886,6 @@
         { community: '클리앙 굴러간당', title: 'FSD 내년에 한국 출시될 가능성', url: 'https://www.clien.net/service/board/cm_car/19227020', stat: '조회 1,102 · 댓글 5' },
         { community: '디시인사이드 전기차갤러리', title: '진지하게 byd가 안좋은 이유가 뭐임?', url: 'https://gall.dcinside.com/mgallery/board/view/?id=electric_car&no=998', stat: '조회 242 · 댓글 18' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-14',
@@ -3049,7 +2907,6 @@
         { community: '디시인사이드 자동차갤러리', title: '벤츠 급발진? 사망사고', url: 'https://gall.dcinside.com/board/view/?id=car_new1&no=11447109', stat: '조회 83 · 댓글 2' },
         { community: '디시인사이드 자동차갤러리', title: '그랜저가 언제부터 플래그십이였냐?', url: 'https://gall.dcinside.com/board/view/?id=car_new1&no=11447083', stat: '조회 104 · 댓글 7' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-14',
@@ -3071,7 +2928,6 @@
         { community: '보배드림 수입차게시판', title: '"추가 할인" 미끼 개인 계좌로 돈받아…BMW 딜러 직원', url: 'https://www.bobaedream.co.kr/view?code=import&No=714626', stat: '조회 1,976 · 추천 23 · 댓글 1' },
         { community: '보배드림 수입차게시판', title: '폭스바겐 10만명 감원 추진', url: 'https://www.bobaedream.co.kr/view?code=import&No=714632', stat: '조회 1,852 · 추천 18 · 댓글 3' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-13',
@@ -3092,7 +2948,6 @@
         { community: '클리앙 굴러간당', title: '자율주행에 대해서 질문하나 드립니다', url: 'https://www.clien.net/service/board/cm_car/19225765', stat: '조회 433 · 댓글 16' },
         { community: '보배드림 국산차게시판', title: '아반떼N 파이널 에디션 출시 예정', url: 'https://www.bobaedream.co.kr/view?code=national&No=2410344', stat: '조회 91' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-13',
@@ -3112,7 +2967,6 @@
         { community: '클리앙 굴러간당', title: '모델YL 타봤는데 확실히 역체감이 있네요', url: 'https://www.clien.net/service/board/cm_car/19225348', stat: '조회 3,616 · 댓글 10' },
         { community: '클리앙 굴러간당', title: '폭염 때 옛날 전기차 주행가능거리 저하', url: 'https://www.clien.net/service/board/cm_car/19225608', stat: '조회 2,575 · 댓글 12' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-13',
@@ -3134,7 +2988,6 @@
         { community: '클리앙 굴러간당', title: "여보, 벤츠값에도 '그랜저' 삽시다…'폭망' 위기탈출, 다시 성공한 아빠차", url: 'https://www.clien.net/service/board/cm_car/19224865', stat: '조회 6,216 · 댓글 28' },
         { community: '클리앙 굴러간당', title: '그랑콜레오스는 구입한사람들은 좋다고하는데 욕을 먹네요.', url: 'https://www.clien.net/service/board/cm_car/19225455', stat: '조회 3,216 · 댓글 36' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-10',
@@ -3157,7 +3010,6 @@
         { community: '클리앙 굴러간당', title: '현대기아 최초의 e-AWD 차가 출시됐네요', url: 'https://www.clien.net/service/board/cm_car/19224074', stat: '조회 3,574 · 댓글 6' },
         { community: '클리앙 굴러간당', title: '투싼은 디자인 거의 확정이네요 ㄷㄷㄷ', url: 'https://www.clien.net/service/board/cm_car/19224419', stat: '조회 3,570 · 댓글 28' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-10',
@@ -3178,7 +3030,6 @@
         { community: '클리앙 굴러간당', title: '상반기 수입차 4위 BYD, 렉서스·아우디 제쳤다', url: 'https://www.clien.net/service/board/cm_car/19224239', stat: '조회 1,380 · 댓글 37' },
         { community: '클리앙 굴러간당', title: 'GLC ev랑 ix3랑 비교하니 벤츠가 이번엔 진짜 괜찮네요', url: 'https://www.clien.net/service/board/cm_car/19224200', stat: '조회 1,325 · 댓글 15' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-10',
@@ -3200,7 +3051,6 @@
         { community: '클리앙 굴러간당', title: '부산 모터쇼 62만명 vs 베이징 모터쇼 128만명', url: 'https://www.clien.net/service/board/cm_car/19224056', stat: '조회 1,346 · 댓글 10' },
         { community: '클리앙 굴러간당', title: '내일 전기차를 처음운전해보는데 운전하는게 많이 다른가요?', url: 'https://www.clien.net/service/board/cm_car/19223990', stat: '조회 1,396 · 댓글 12' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-09',
@@ -3222,7 +3072,6 @@
         { community: '보배드림 국산차게시판', title: '자동차보험료가 오르는이유', url: 'https://www.bobaedream.co.kr/view?code=national&No=2409396', stat: '조회 2,892 · 댓글 17' },
         { community: '클리앙 굴러간당', title: '코스트코 타이어가 오히려 저렴하네요', url: 'https://www.clien.net/service/board/cm_car/19223808', stat: '조회 1,570 · 댓글 15' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-09',
@@ -3243,7 +3092,6 @@
         { community: '클리앙 굴러간당', title: '렉스턴후속 KGM SE10 명칭 .....근황', url: 'https://www.clien.net/service/board/cm_car/19223341', stat: '조회 4,462 · 댓글 48' },
         { community: '클리앙 굴러간당', title: 'FSD 국내 도입에 대한 새로운 해설', url: 'https://www.clien.net/service/board/cm_car/19223170', stat: '조회 3,575 · 댓글 15' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-09',
@@ -3265,7 +3113,6 @@
         { community: '보배드림 수입차게시판', title: '테슬라가 국민차가 됬어요', url: 'https://www.bobaedream.co.kr/view?code=import&No=714600', stat: '조회 18,544 · 댓글 40' },
         { community: '클리앙 굴러간당', title: 'GLC 일렉트릭 사전예약 개시 예정', url: 'https://www.clien.net/service/board/cm_car/19222815', stat: '조회 2,550 · 댓글 28' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-08',
@@ -3286,7 +3133,6 @@
         { community: '클리앙 굴러간당', title: '렉스턴후속 KGM SE10 명칭 .....근황', url: 'https://www.clien.net/service/board/cm_car/19223341', stat: '조회 1,037 · 댓글 15' },
         { community: '클리앙 굴러간당', title: '이지차저 업체 요금미납 단전 엄청 심각한데요...', url: 'https://www.clien.net/service/board/cm_car/19223212', stat: '조회 1,219 · 댓글 4' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-08',
@@ -3310,7 +3156,6 @@
         { community: '클리앙 굴러간당', title: '신형 ix3 구경했어요', url: 'https://www.clien.net/service/board/cm_car/19223012', stat: '조회 1,962 · 댓글 10' },
         { community: '클리앙 굴러간당', title: 'cn8 아반떼 얼마 하려나요', url: 'https://www.clien.net/service/board/cm_car/19222966', stat: '조회 1,707 · 댓글 24' },
       ],
-      heydealer: [],
     },
     {
       date: '2026-07-08',
@@ -3333,7 +3178,6 @@
         { community: '클리앙 굴러간당', title: 'iX3 초기물량 배정 받았는데...', url: 'https://www.clien.net/service/board/cm_car/19222703', stat: '조회 2,337 · 댓글 14' },
         { community: '클리앙 굴러간당', title: '테슬라 모델S 플레드 데리고 왔습니다', url: 'https://www.clien.net/service/board/cm_car/19222799', stat: '조회 1,770 · 댓글 16' },
       ],
-      heydealer: [],
     },
     /* ENTRIES:END */
   ];
@@ -3341,7 +3185,6 @@
   const SECTION_DEFS = [
     { key: 'carNews', label: '업계 소식', rail: 'car' },
     { key: 'communityPosts', label: '커뮤니티 인기글', rail: 'community' },
-    { key: 'heydealer', label: "'헤이딜러' 언급", rail: 'heydealer' },
   ];
 
   function escapeHtml(str) {
